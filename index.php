@@ -31,6 +31,10 @@
             background: #FEEF1C;
             color: #000;
         }
+        .btn-yes-no:hover{
+            background: #FEEF1C;
+            color: #000;
+        }
         label{
 
         }
@@ -83,14 +87,14 @@
         }
 
         .slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
+            width: 18px;
+            height: 18px;
             background: #FEEF1C;
             cursor: pointer;
             border-radius: 0px;
         }
         input[type=range]::-moz-range-track {
-            width: 90%;
+            width: 93%;
             height: 15px;
             cursor: pointer;
 
@@ -109,6 +113,67 @@
         .title-margin{
             margin-bottom: 10px;
         }
+        .grey-color-text{
+            color: #CDCDCD;
+        }
+
+        /*switch*/
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 25px;
+        }
+
+        .switch input {display:none;}
+
+        .slider-switch {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider-switch:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 0px;
+            bottom: 0px;
+            background-color: yellow;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider-switch {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider-switch {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider-switch:before {
+            -webkit-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            transform: translateX(30px);
+        }
+
+        /* Rounded sliders */
+        .slider-switch.round {
+            border-radius: 34px;
+        }
+
+        .slider-switch.round:before {
+            border-radius: 50%;
+        }
 
 
 
@@ -123,7 +188,7 @@
 
     <div class="row justify-content-center">
 
-        <div class="col-sm-6 ">
+        <div class="col-sm-8">
 
             <!--start of marrital status-->
 
@@ -166,9 +231,11 @@
 
             </div>
 
+            <!--end of marrital status-->
+
             <!--age area-->
 
-            <div class="row justify-content-center padding-top-bottom age-div " style="border: 1px solid firebrick">
+            <div class="row justify-content-center padding-top-bottom age-div " >
 
 
                 <div class="row">
@@ -188,7 +255,10 @@
 
             <!--end age arae-->
 
-            <div class="row justify-content-center padding-top-bottom grey-background education-div" style="border: 1px solid firebrick">
+
+            <!--education area-->
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
 
 
                 <div class="row">
@@ -202,9 +272,416 @@
 
                 <div class="col-12">
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    <p style="margin-left: 30px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                 </div>
 
             </div>
+
+            <!--end education area-->
+
+
+            <!--ielts button area-->
+
+
+            <div class="row justify-content-center padding-top-bottom  education-div" >
+
+
+                    <div class="col-12 text-center married-status-text title-margin">
+                        <span ><b>Have You given IELTS?</b></span>
+                    </div>
+                <div class="col-12 ">
+                    <div class="row justify-content-center ">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <!--end of ielts button area-->
+
+            <!--ielts result  area-->
+
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Your Results of IELTS</b></span>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Listening</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4.5" step=".5" max="9" value="6.5" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Reading</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="3.5" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>writing</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Speaking</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <!--end of ielts result  area-->
+
+
+            <!--tef button area-->
+
+
+            <div class="row justify-content-center padding-top-bottom  education-div" >
+
+
+                <div class="col-12 text-center married-status-text title-margin">
+                    <span ><b>Have You given TEF?</b></span>
+                </div>
+                <div class="col-12 ">
+                    <div class="row justify-content-center ">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <!--end of tef button area-->
+
+            <!--tef result  area-->
+
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Your Results of TEF</b></span>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Listening</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="145" step="1" max="415" value="300" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Reading</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="121" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>writing</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Speaking</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <!--end of tef result  area-->
+
+
+            <!--tef result  area-->
+
+
+            <div class="row justify-content-center padding-top-bottom education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Work Experience and Trade</b></span>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-4">
+
+                            <p style="font-size: .7rem"><b>Canadian Work Experience</b></p>
+
+                        </div>
+
+                        <div class="col-6">
+                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-4">
+
+                            <p style="font-size: .7rem"><b>Foreign work Experience</b></p>
+
+                        </div>
+
+                        <div class="col-6">
+                            <input type="range" min="0" max="5" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-4">
+
+                            <p style="font-size: .7rem"><b>Canadian trade certificate</b></p>
+
+                        </div>
+
+                        <div class="col-6">
+                            <div class="row justify-content-center ">
+                                <input type="button" class="btn btn-outline-secondary  btn-sm  col-3 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary  btn-sm col-3 btn-yes-no" value="NO">
+
+                        </div>
+                       
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+            <!--end of tef result  area-->
 
         </div>
 
@@ -235,10 +712,19 @@
 
 
             $('.married').click(function () {
-            $(this).parent().addClass('background-yellow') ;
-            $(this).parent().siblings().removeClass('background-yellow');
+                $(this).parent().addClass('background-yellow') ;
+                $(this).parent().siblings().removeClass('background-yellow');
 
-            console.log($(this).val());
+                console.log($(this).val());
+
+            });
+
+            $('.btn-yes-no').click(function () {
+
+
+                $(this).addClass('background-yellow');
+                $(this).siblings().removeClass('background-yellow');
+                console.log('fsdf');
 
             });
 
