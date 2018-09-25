@@ -14,7 +14,6 @@
 
 <div class="container">
 
-
     <div class="row justify-content-center">
 
         <div class="col-sm-8">
@@ -906,10 +905,6 @@
                 </div>
 
 
-
-
-
-
             </div>
 
             <!--end of tef result  area-->
@@ -1037,22 +1032,19 @@
 
                     </div>
                     <div class="row">
-
                         <div class="col-12">
                             <div class="row justify-content-center ">
 
                                 <div class="col-11 text-center">
 
 
-                                <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+                                <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
                                 <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                                 </div>
 
                             </div>
 
                         </div>
-
-
 
                     </div>
 
@@ -1067,22 +1059,9 @@
 
                 <!--end education in canada->
 
-
-
             </div>
 
-
-
-
-
-
             <!--end category additional -->
-
-
-
-
-
-
 
     </div>
 
@@ -1095,7 +1074,8 @@
 
 </div>
 
-
+    </div>
+</div>
 <!--jquery start-->
 
 <script src="bootstrap/js/jquery.js"></script>
