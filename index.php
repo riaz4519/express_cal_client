@@ -34,7 +34,7 @@
 
                     <div class="row justify-content-center">
 
-                            <input type="button"  name="married" class="btn married btn-outline-secondary no-border-radius btn-sm col-4 col-md-3 col-lg-2" value="SINGLE"/>
+                            <input type="button"  name="married" class="btn married btn-outline-secondary no-border-radius btn-sm col-4 col-md-3 col-lg-2 background-yellow" value="SINGLE"/>
 
                             <input type="button"  name="married"  class="btn married  btn-outline-secondary no-border-radius btn-sm  col-4 col-md-3  col-lg-2" value="MARRIED" />
 
@@ -56,31 +56,25 @@
 
             <div class="row justify-content-center padding-top-bottom age-div " >
 
-
-
-
                     <div class=" col-12 text-center married-status-text title-margin">
                         <span class=""><b>AGE</b></span>
                     </div>
-
 
                 <div class="col-10">
 
                     <div class="row justify-content-center">
 
                         <div class="col-11">
-                            <input type="range" min="16" max="56" value="16" class="slider" id="myRange">
+                            <input type="range" min="16" max="56" value="16" class="slider age-range" id="myRange">
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="age-change">0</span></b>
                         </div>
 
                     </div>
 
                 </div>
-
-
 
             </div>
 
@@ -94,16 +88,13 @@
 
 
 
-                    <div class=" col-12 text-center married-status-text title-margin">
+                <div class=" col-12 text-center married-status-text title-margin">
                         <span class="title-margin"><b>Years Of Education </b></span>
                     </div>
 
-
-
-
                 <div class="col-10 text-center">
-                    <input type="range" min="0" max="9" value="0" class="slider" id="myRange">
-                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                    <input type="range" min="0" max="8" value="0" class="slider education-range" id="myRange">
+                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="education-change">Two Year Post Secondary Credentials</b></p>
                 </div>
 
             </div>
