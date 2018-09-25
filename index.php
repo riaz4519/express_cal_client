@@ -727,6 +727,9 @@
 
             <!--spouse area-->
 
+
+            <!--spouse education-->
+
             <div class="row justify-content-center padding-top-bottom grey-background education-div" >
 
                 <div class="row">
@@ -797,6 +800,8 @@
                 </div>
 
             </div>
+
+            <!--end of spouse education-->
 
             <!--ielts button area-->
 
@@ -1132,7 +1137,7 @@
                 <!--provincial nomication -->
                 <div class="col-12 mb-2 grey-background">
                     <div class="col-12 text-center">
-                        <p style="font-size: .7rem"><b>Provincial nomination</b></p>
+                        <p style="font-size: .7rem"><b>Provincial nomination?</b></p>
 
                     </div>
                     <div class="row">
@@ -1195,7 +1200,78 @@
 
                 <!--end work offer-->
 
-                <!--end of tef result  area-->
+                <!--family in canada -->
+
+                <div class="col-12 mb-2 grey-background">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>family in canada?</b></p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <!--end family in canada -->
+
+                <!--education in canada -->
+
+                <div class="col-12 mb-2 ">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>offer of employment in Canada</b></p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
+
+                                <div class="col-11 text-center">
+
+
+                                <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+                                <p style="margin-left: 20px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <!--end education in canada->
+
+
 
             </div>
 
