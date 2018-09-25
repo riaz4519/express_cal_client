@@ -196,10 +196,17 @@
 
         /*end of no border radius*/
 
+        /*start of padding */
+
+        .padding-top-bottom-additional{
+
+            padding-top: 3%;
+            padding-bottom: 3%;
 
 
+        }
 
-
+        /*end of padding*/
 
     </style>
 </head>
@@ -215,42 +222,33 @@
 
             <!--start of marrital status-->
 
-            <div class="row grey-background justify-content-center">
+            <div class="row grey-background justify-content-center padding-top-bottom">
 
 
-            <div class="married-div ">
 
-                <div class="text-center married-status-text title-margin">
+
+                <div class="col-12 text-center married-status-text title-margin">
                     <span ><b>Marrital Status </b></span>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="btn-group">
-
-                        <div class="btn btn-outline-secondary text-center married-div-1">
-                            <input type="radio" id="r1" name="married" value="fsdf" class="married"  style="display: none"  />
-                            <label for="r1" class="">SINGLE</label>
-
-                        </div>
-
-                        <div class="btn btn-outline-secondary text-center married-div-1">
-                            <input type="radio" id="r2" name="married" class="married"  style="display: none"  />
-                            <label for="r2">MARRIED</label>
-                        </div>
-                        <div class="btn btn-outline-secondary text-center married-div-1">
-                            <input type="radio" id="r3" name="married" class="married"  style="display: none"  />
-                            <label for="r3">SEPARATED</label>
-                        </div>
+                <div class="col-12">
 
 
+                    <div class="row justify-content-center">
 
+                            <input type="button"  name="married" class="btn married btn-outline-secondary no-border-radius btn-sm col-4 col-md-3 col-lg-2" value="SINGLE"/>
+
+                            <input type="button"  name="married"  class="btn married  btn-outline-secondary no-border-radius btn-sm  col-4 col-md-3  col-lg-2" value="MARRIED" />
+
+                            <input type="button"  name="married"  class="btn married  btn-outline-secondary no-border-radius btn-sm  col-4 col-md-3  col-lg-2" value="SEPARATED" />
                     </div>
+
 
                 </div>
 
 
 
-            </div>
+
 
             </div>
 
@@ -293,9 +291,9 @@
                 </div>
 
 
-                <div class="col-12">
+                <div class="col-12 text-center">
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    <p style="margin-left: 30px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                 </div>
 
             </div>
@@ -313,8 +311,8 @@
                     </div>
                 <div class="col-12 ">
                     <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
                     </div>
 
 
@@ -478,8 +476,8 @@
                 </div>
                 <div class="col-12 ">
                     <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius btn-sm col-5 btn-yes-no" value="NO">
                     </div>
 
 
@@ -694,8 +692,8 @@
 
                         <div class="col-6">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
-                                <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
 
                         </div>
 
@@ -740,25 +738,60 @@
 
                 </div>
 
-                <div class="col-12 mb-2">
+                <div class="col-12 mb-2 ">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>Education in canada</b></p>
+
+                    </div>
                     <div class="row">
-                        <div class="col-4">
 
-                            <p style="font-size: .7rem"><b>Education</b></p>
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
 
-                        </div>
+                                <div class="col-11 text-center">
 
-                        <div class="col-6">
-                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
-                            <p style="margin-left: 20px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
 
-                        </div>
-                        <div class="col-1">
+                                    <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+                                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                                </div>
 
-                            <b><span>0</span></b>
+                            </div>
 
                         </div>
 
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <!--canadian work experience-->
+
+                <div class="col-12 mb-2 ">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>Canadian Work Experience</b></p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
+
+                                <div class="col-11 text-center">
+
+
+                                    <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
 
@@ -766,33 +799,14 @@
 
 
 
-                </div>
-                <div class="col-12 mb-2">
-                    <div class="row">
-                        <div class="col-4">
-
-                            <p style="font-size: .7rem"><b>Canadian Work Experience</b></p>
-
-                        </div>
-
-                        <div class="col-6">
-                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
-
-                        </div>
-                        <div class="col-1">
-
-                            <b><span>0</span></b>
-
-                        </div>
 
 
-
-
-                    </div>
 
 
 
                 </div>
+
+                <!--end canadian work experience-->
 
 
 
@@ -813,8 +827,8 @@
                 </div>
                 <div class="col-12 ">
                     <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius col-5 btn-yes-no" value="NO">
                     </div>
 
 
@@ -976,8 +990,8 @@
                 </div>
                 <div class="col-12 ">
                     <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
                     </div>
 
 
@@ -1123,19 +1137,16 @@
 
             <!--category additional -->
 
-
-
-
             <div class="row justify-content-center padding-top-bottom education-div" >
 
 
                 <div class="col-12 text-center married-status-text  title-margin">
-                    <span ><b>Work Experience and Trade</b></span>
+                    <span ><b>Additional points</b></span>
                 </div>
 
 
                 <!--provincial nomication -->
-                <div class="col-12 mb-2 grey-background">
+                <div class="col-12 mb-2 grey-background padding-top-bottom-additional">
                     <div class="col-12 text-center">
                         <p style="font-size: .7rem"><b>Provincial nomination?</b></p>
 
@@ -1168,7 +1179,7 @@
 
                 <!--work offer -->
 
-                <div class="col-12 mb-2 ">
+                <div class="col-12 mb-2 padding-top-bottom-additional">
                     <div class="col-12 text-center">
                         <p style="font-size: .7rem"><b>offer of employment in Canada</b></p>
 
@@ -1202,7 +1213,7 @@
 
                 <!--family in canada -->
 
-                <div class="col-12 mb-2 grey-background">
+                <div class="col-12 mb-2 grey-background padding-top-bottom-additional">
                     <div class="col-12 text-center">
                         <p style="font-size: .7rem"><b>family in canada?</b></p>
 
@@ -1235,9 +1246,9 @@
 
                 <!--education in canada -->
 
-                <div class="col-12 mb-2 ">
+                <div class="col-12 mb-2 padding-top-bottom-additional">
                     <div class="col-12 text-center">
-                        <p style="font-size: .7rem"><b>offer of employment in Canada</b></p>
+                        <p style="font-size: .7rem"><b>Education in canada</b></p>
 
                     </div>
                     <div class="row">
@@ -1249,7 +1260,7 @@
 
 
                                 <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
-                                <p style="margin-left: 20px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                                <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                                 </div>
 
                             </div>
@@ -1290,6 +1301,8 @@
 
     </div>
 
+            <!--end category additional-->
+
 
 
 
@@ -1312,8 +1325,8 @@
 
 
             $('.married').click(function () {
-                $(this).parent().addClass('background-yellow') ;
-                $(this).parent().siblings().removeClass('background-yellow');
+                $(this).addClass('background-yellow') ;
+                $(this).siblings().removeClass('background-yellow');
 
                 console.log($(this).val());
 
