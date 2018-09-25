@@ -176,6 +176,29 @@
         }
 
 
+        /*title margin */
+
+        .title-margin{
+            margin-bottom: 15px;
+        }
+
+        /* end title margin*/
+
+        /*no border radius*/
+
+        .no-border-radius{
+
+            border-radius: 0px;
+
+
+
+        }
+
+        /*end of no border radius*/
+
+
+
+
 
 
     </style>
@@ -1094,6 +1117,92 @@
 
 
             <!--category additional -->
+
+
+
+
+            <div class="row justify-content-center padding-top-bottom education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Work Experience and Trade</b></span>
+                </div>
+
+
+                <!--provincial nomication -->
+                <div class="col-12 mb-2 grey-background">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>Provincial nomination</b></p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <!--end of provincial nomination-->
+
+                <!--work offer -->
+
+                <div class="col-12 mb-2 ">
+                    <div class="col-12 text-center">
+                        <p style="font-size: .7rem"><b>offer of employment in Canada</b></p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center ">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-2 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-4 btn-yes-no" value="NOC OOX">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-4 btn-yes-no" value="NOC O/A/B">
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <!--end work offer-->
+
+                <!--end of tef result  area-->
+
+            </div>
+
+
+
+
+
 
             <!--end category additional -->
 
