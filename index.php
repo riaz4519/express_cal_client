@@ -7,208 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <style>
-        html {
-            font-family: sans-serif;
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        // -ms-overflow-style: scrollbar;
-        // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-
-        input[type='radio']{
-
-        }
-        .background-yellow{
-            background: #FEEF1C;
-        }
-        .btn-group .btn{
-            border-radius: 0px;
-        }
-        .btn-group .btn:hover{
-            background: #FEEF1C;
-            color: #000;
-        }
-        .btn-yes-no:hover{
-            background: #FEEF1C;
-            color: #000;
-        }
-        label{
-
-        }
-        .grey-background{
-            background: #F3F3F3;
-        }
-        .married-div{
-            padding-bottom: 20px;
-
-
-
-
-        }
-        .married-div label{
-
-        }
-        .col-6{
-            border: 1px; solid black;
-        }
-
-
-        /*range slider*/
-
-        .slidecontainer {
-            width: 100%;
-        }
-
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 25px;
-
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
-
-        .slider:hover {
-            opacity: 1;
-        }
-
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 25px;
-            height: 25px;
-            background: #FEEF1C;
-            cursor: pointer;
-        }
-
-        .slider::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
-            background: #FEEF1C;
-            cursor: pointer;
-            border-radius: 0px;
-        }
-        input[type=range]::-moz-range-track {
-            width: 93%;
-            height: 15px;
-            cursor: pointer;
-
-            background: #CDCDCD;
-            border-radius: 1.3px;
-
-        }
-        .padding-top-bottom{
-            padding: 20px 0px;
-        }
-
-
-
-        /**/
-
-        .title-margin{
-            margin-bottom: 10px;
-        }
-        .grey-color-text{
-            color: #CDCDCD;
-        }
-
-        /*switch*/
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 25px;
-        }
-
-        .switch input {display:none;}
-
-        .slider-switch {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider-switch:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 0px;
-            bottom: 0px;
-            background-color: yellow;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked + .slider-switch {
-            background-color: #2196F3;
-        }
-
-        input:focus + .slider-switch {
-            box-shadow: 0 0 1px #2196F3;
-        }
-
-        input:checked + .slider-switch:before {
-            -webkit-transform: translateX(30px);
-            -ms-transform: translateX(30px);
-            transform: translateX(30px);
-        }
-
-        /* Rounded sliders */
-        .slider-switch.round {
-            border-radius: 34px;
-        }
-
-        .slider-switch.round:before {
-            border-radius: 50%;
-        }
-
-
-        /*title margin */
-
-        .title-margin{
-            margin-bottom: 15px;
-        }
-
-        /* end title margin*/
-
-        /*no border radius*/
-
-        .no-border-radius{
-
-            border-radius: 0px;
-
-
-
-        }
-
-        /*end of no border radius*/
-
-        /*start of padding */
-
-        .padding-top-bottom-additional{
-
-            padding-top: 3%;
-            padding-bottom: 3%;
-
-
-        }
-
-        /*end of padding*/
-
-    </style>
+    <link rel="stylesheet" href="bootstrap/css/crs.css">
 </head>
 <body>
 
@@ -259,17 +58,16 @@
             <div class="row justify-content-center padding-top-bottom age-div " >
 
 
-                <div class="row">
+
 
                     <div class=" col-12 text-center married-status-text title-margin">
                         <span class=""><b>AGE</b></span>
                     </div>
 
-                </div>
 
 
-                <div class="col-12">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="col-11">
+                    <input type="range" min="16" max="56" value="16" class="slider" id="myRange">
                 </div>
 
             </div>
@@ -282,16 +80,16 @@
             <div class="row justify-content-center padding-top-bottom grey-background education-div" >
 
 
-                <div class="row">
+
 
                     <div class=" col-12 text-center married-status-text title-margin">
                         <span class="title-margin"><b>Years Of Education </b></span>
                     </div>
 
-                </div>
 
 
-                <div class="col-12 text-center">
+
+                <div class="col-11 text-center">
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                     <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                 </div>
@@ -344,7 +142,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4.5" step=".5" max="9" value="6.5" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="4" step=".5" max="9" value="4" class="slider" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
@@ -374,7 +172,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="3.5" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3" max="9" step=".5" value="3" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -405,7 +203,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -435,7 +233,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -454,11 +252,6 @@
                 </div>
 
                 <!--end speaking-->
-
-
-
-
-
 
             </div>
 
@@ -508,7 +301,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="145" step="1" max="415" value="300" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="144" step="1" max="415" value="144" class="slider" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
@@ -535,7 +328,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="121" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="120" max="415" step="1" value="120" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -562,7 +355,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -589,7 +382,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -637,7 +430,7 @@
                         </div>
 
                         <div class="col-6">
-                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
@@ -664,7 +457,7 @@
                         </div>
 
                         <div class="col-6">
-                            <input type="range" min="0" max="5" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="0" max="5" step="1" value="0" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -751,7 +544,7 @@
                                 <div class="col-11 text-center">
 
 
-                                    <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+                                    <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
                                     <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                                 </div>
 
@@ -760,12 +553,6 @@
                         </div>
 
                     </div>
-
-
-
-
-
-
 
 
                 </div>
@@ -785,7 +572,7 @@
                                 <div class="col-11 text-center">
 
 
-                                    <input type="range" min="0" step="1" max="7" value="1" class="slider" id="myRange" data-show-value="true">
+                                    <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
 
                                 </div>
 
@@ -807,8 +594,6 @@
                 </div>
 
                 <!--end canadian work experience-->
-
-
 
                 <div>
                 </div>
@@ -860,7 +645,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4.5" step=".5" max="9" value="6.5" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="4" step=".5" max="9" value="4" class="slider" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
@@ -890,7 +675,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="3.5" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3" max="9" step=".5" value="3" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -921,7 +706,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -951,7 +736,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -1021,7 +806,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="145" step="1" max="415" value="300" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="144" step="1" max="415" value="144" class="slider" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
@@ -1048,7 +833,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="121" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="120" max="415" step="1" value="120" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -1075,7 +860,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
@@ -1102,7 +887,7 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
 
                         </div>
                         <div class="col-1">
