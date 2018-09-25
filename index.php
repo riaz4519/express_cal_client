@@ -64,10 +64,23 @@
                     </div>
 
 
+                <div class="col-10">
 
-                <div class="col-11">
-                    <input type="range" min="16" max="56" value="16" class="slider" id="myRange">
+                    <div class="row justify-content-center">
+
+                        <div class="col-11">
+                            <input type="range" min="16" max="56" value="16" class="slider" id="myRange">
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+                        </div>
+
+                    </div>
+
                 </div>
+
+
 
             </div>
 
@@ -88,8 +101,8 @@
 
 
 
-                <div class="col-11 text-center">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="col-10 text-center">
+                    <input type="range" min="0" max="9" value="0" class="slider" id="myRange">
                     <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                 </div>
 
@@ -520,7 +533,7 @@
 
             <!--spouse education-->
 
-            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+            <div class="row justify-content-center padding-top-bottom grey-background spouse-remove spouse" >
 
                 <div class="row">
 
@@ -603,7 +616,7 @@
 
             <!--ielts button area-->
 
-            <div class="row justify-content-center padding-top-bottom  education-div" >
+            <div class="row justify-content-center padding-top-bottom  spouse-remove spouse" >
 
 
                 <div class="col-12 text-center married-status-text title-margin">
@@ -627,7 +640,7 @@
 
             <!--ielts result  area-->
 
-            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+            <div class="row justify-content-center padding-top-bottom grey-background spouse-remove spouse" >
 
 
                 <div class="col-12 text-center married-status-text  title-margin">
@@ -766,7 +779,7 @@
 
             <!--tef button area-->
 
-            <div class="row justify-content-center padding-top-bottom  education-div" >
+            <div class="row justify-content-center padding-top-bottom spouse-remove spouse" >
 
 
                 <div class="col-12 text-center married-status-text title-margin">
@@ -790,7 +803,7 @@
 
             <!--tef result  area-->
 
-            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+            <div class="row justify-content-center padding-top-bottom grey-background spouse-remove spouse" >
 
 
                 <div class="col-12 text-center married-status-text  title-margin">
@@ -1038,7 +1051,7 @@
                                 <div class="col-11 text-center">
 
 
-                                <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
+                                <input type="range" min="0" step="0" max="9" value="0" class="slider" id="myRange" data-show-value="true">
                                 <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
                                 </div>
 
@@ -1048,16 +1061,9 @@
 
                     </div>
 
-
-
-
-
-
-
-
                 </div>
 
-                <!--end education in canada->
+                <!--end education in canada-->
 
             </div>
 
@@ -1067,15 +1073,10 @@
 
             <!--end category additional-->
 
-
-
-
-
-
-</div>
-
     </div>
+
 </div>
+
 <!--jquery start-->
 
 <script src="bootstrap/js/jquery.js"></script>
@@ -1084,33 +1085,7 @@
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-<script>
-
-    $(document).ready(function () {
-
-
-            $('.married').click(function () {
-                $(this).addClass('background-yellow') ;
-                $(this).siblings().removeClass('background-yellow');
-
-                console.log($(this).val());
-
-            });
-
-            $('.btn-yes-no').click(function () {
-
-
-                $(this).addClass('background-yellow');
-                $(this).siblings().removeClass('background-yellow');
-                console.log('fsdf');
-
-            });
-
-
-
-    });
-
-</script>
+<script src="bootstrap/js/crs.js"></script>
 
 </body>
 </html>

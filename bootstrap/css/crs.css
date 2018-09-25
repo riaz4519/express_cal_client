@@ -205,7 +205,9 @@ input:checked + .slider-switch:before {
     padding-top: 3%;
     padding-bottom: 3%;
 
-
+}
+.spouse-remove{
+    display: none;
 }
 
 /*end of padding*/
