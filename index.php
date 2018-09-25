@@ -282,7 +282,6 @@
 
             <!--ielts button area-->
 
-
             <div class="row justify-content-center padding-top-bottom  education-div" >
 
 
@@ -307,13 +306,14 @@
 
             <!--ielts result  area-->
 
-
             <div class="row justify-content-center padding-top-bottom grey-background education-div" >
 
 
                 <div class="col-12 text-center married-status-text  title-margin">
                     <span ><b>Your Results of IELTS</b></span>
                 </div>
+
+                <!--listening-->
                 <div class="col-12 mb-2">
                     <div class="row">
                         <div class="col-2">
@@ -340,6 +340,9 @@
 
 
                 </div>
+                <!--end listening-->
+
+                <!--reading-->
 
                 <div class="col-12 mb-2">
                     <div class="row">
@@ -368,6 +371,10 @@
 
                 </div>
 
+                <!--end reading-->
+
+                <!--writing-->
+
                 <div class="col-12 mb-2">
                     <div class="row">
                         <div class="col-2">
@@ -394,6 +401,9 @@
 
 
                 </div>
+                <!--end writing-->
+
+                <!--speaking-->
 
                 <div class="col-12 mb-2">
                     <div class="row">
@@ -421,6 +431,8 @@
 
 
                 </div>
+
+                <!--end speaking-->
 
 
 
@@ -587,6 +599,8 @@
             <!--tef result  area-->
 
 
+            <!--work experience-->
+
             <div class="row justify-content-center padding-top-bottom education-div" >
 
 
@@ -657,11 +671,11 @@
 
                         <div class="col-6">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary  btn-sm  col-3 btn-yes-no" value="YES">
-                                <input type="button" class="btn btn-outline-secondary  btn-sm col-3 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
 
                         </div>
-                       
+
 
 
 
@@ -684,6 +698,407 @@
             <!--end of tef result  area-->
 
         </div>
+
+            <!--end of work experience-->
+
+
+            <!--spouse area-->
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+
+                <div class="row">
+
+                    <div class=" col-12 text-center married-status-text title-margin">
+                        <span class="title-margin"><b>Spouse / common-law partner </b></span>
+                    </div>
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-4">
+
+                            <p style="font-size: .7rem"><b>Education</b></p>
+
+                        </div>
+
+                        <div class="col-6">
+                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
+                            <p style="margin-left: 20px;font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-4">
+
+                            <p style="font-size: .7rem"><b>Canadian Work Experience</b></p>
+
+                        </div>
+
+                        <div class="col-6">
+                            <input type="range" min="0" step="1" max="7" value="300" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div>
+                </div>
+
+            </div>
+
+            <!--ielts button area-->
+
+            <div class="row justify-content-center padding-top-bottom  education-div" >
+
+
+                <div class="col-12 text-center married-status-text title-margin">
+                    <span ><b>Have Your spouse given IELTS?</b></span>
+                </div>
+                <div class="col-12 ">
+                    <div class="row justify-content-center ">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <!--end of ielts button area-->
+
+            <!--ielts result  area-->
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Spouse IELTS Result</b></span>
+                </div>
+
+                <!--listening-->
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Listening</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4.5" step=".5" max="9" value="6.5" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                <!--end listening-->
+
+                <!--reading-->
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Reading</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="3.5" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <!--end reading-->
+
+                <!--writing-->
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>writing</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                <!--end writing-->
+
+                <!--speaking-->
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Speaking</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="4" max="9" step=".5" value="6.5" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <!--end speaking-->
+
+
+
+
+
+
+            </div>
+
+            <!--end of ielts result  area-->
+
+            <!--tef button area-->
+
+            <div class="row justify-content-center padding-top-bottom  education-div" >
+
+
+                <div class="col-12 text-center married-status-text title-margin">
+                    <span ><b>Have Your spouse given TEF??</b></span>
+                </div>
+                <div class="col-12 ">
+                    <div class="row justify-content-center ">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm  col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm col-5 btn-yes-no" value="NO">
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <!--end of tef button area-->
+
+            <!--tef result  area-->
+
+            <div class="row justify-content-center padding-top-bottom grey-background education-div" >
+
+
+                <div class="col-12 text-center married-status-text  title-margin">
+                    <span ><b>Spouse TEF Result</b></span>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Listening</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="145" step="1" max="415" value="300" class="slider" id="myRange" data-show-value="true">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Reading</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="121" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>writing</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+
+                            <p style="font-size: .8rem"><b>Speaking</b></p>
+
+                        </div>
+
+                        <div class="col-8">
+                            <input type="range" min="181" max="415" step="1" value="300" class="slider" id="myRange">
+
+                        </div>
+                        <div class="col-1">
+
+                            <b><span>0</span></b>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <!--end of tef result  area-->
+
+
+
+            <!--end spouse area-->
+
+
+
+            <!--category additional -->
+
+            <!--end category additional -->
+
+
+
 
 
 
