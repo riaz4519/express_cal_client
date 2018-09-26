@@ -940,8 +940,8 @@
 
                         <div class="col-12">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius provincial_btn  btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  provincial_btn btn-sm col-5 btn-yes-no" value="NO">
 
                             </div>
 
@@ -973,9 +973,9 @@
 
                         <div class="col-12">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-2 btn-yes-no" value="NO">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-4 btn-yes-no" value="NOC OOX">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-4 btn-yes-no" value="NOC O/A/B">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius offer_canada_btn btn-sm  col-2 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius offer_canada_btn btn-sm col-4 btn-yes-no" value="NOC OOX">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius offer_canada_btn btn-sm col-4 btn-yes-no" value="NOC O/A/B">
 
                             </div>
 
@@ -1007,8 +1007,8 @@
 
                         <div class="col-12">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius family_canada_btn btn-sm  col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius family_canada_btn btn-sm col-5 btn-yes-no" value="NO">
 
                             </div>
 

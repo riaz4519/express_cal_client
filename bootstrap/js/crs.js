@@ -1371,6 +1371,72 @@ $(document).ready(function () {
 
     /*end of trade*/
 
+
+    /*Provincial nomination?*/
+
+    $('.provincial_btn').on('click',function () {
+
+        var provincial_btn_value = $(this).val();
+        if(provincial_btn_value == 'YES'){
+
+            crs_calculate_object.pro_nomination = 600;
+        }
+        else{
+            crs_calculate_object.pro_nomination = 0;
+        }
+
+        console.log('nomi'+crs_calculate_object.pro_nomination);
+
+    });
+
+    /*end Provincial nomination?*/
+
+    /*offer of employment in Canada*/
+
+    $('.offer_canada_btn').on('click',function () {
+
+        var offer_canada_value = $(this).val();
+        console.log(offer_canada_value);
+
+        if (offer_canada_value == "NOC OOX"){
+
+            crs_calculate_object.offer_of_employment = 200;
+
+        }
+        else if (offer_canada_value == 'NOC O/A/B'){
+
+            crs_calculate_object.offer_of_employment = 50;
+        }
+        else{
+            crs_calculate_object.offer_of_employment = 0;
+
+        }
+        console.log(crs_calculate_object.offer_of_employment);
+
+    });
+
+    /*end offer of employment in Canada*/
+
+
+    /*family in canada*/
+
+    $('.family_canada_btn').on('click',function () {
+
+        var family_btn_value = $(this).val();
+
+        if (family_btn_value == 'YES'){
+            crs_calculate_object.siblings_canada = 15;
+
+        }
+        else{
+            crs_calculate_object.siblings_canada = 0;
+        }
+        console.log('sibling'+crs_calculate_object.siblings_canada);
+
+    });
+
+    /*end of family in canada*/
+
     $('.btn-yes-no').click(function () {
 
         $(this).addClass('background-yellow');
