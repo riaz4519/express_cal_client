@@ -537,7 +537,7 @@
 
                 <div class="col-12 mb-2 ">
                     <div class="col-12 text-center">
-                        <p style="font-size: .7rem"><b>Education in canada</b></p>
+                        <p style="font-size: .7rem"><b>Spouse Education</b></p>
 
                     </div>
                     <div class="row">
@@ -548,8 +548,8 @@
                                 <div class="col-11 text-center">
 
 
-                                    <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
-                                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                                    <input type="range" min="0" step="1" max="8" value="0" class="slider spouse_education_range" id="myRange" data-show-value="true">
+                                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="spouse_education_text">Two Year Post Secondary Credentials</b></p>
                                 </div>
 
                             </div>
@@ -1043,8 +1043,8 @@
                                 <div class="col-11 text-center">
 
 
-                                <input type="range" min="0" step="0" max="9" value="0" class="slider" id="myRange" data-show-value="true">
-                                <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b>Two Year Post Secondary Credentials</b></p>
+                                <input type="range" min="0" step="0" max="2" value="0" class="slider canada_education_range" id="myRange" data-show-value="true">
+                                <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="canada_education_text">None</b></p>
                                 </div>
 
                             </div>

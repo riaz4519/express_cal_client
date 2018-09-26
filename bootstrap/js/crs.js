@@ -1372,6 +1372,66 @@ $(document).ready(function () {
     /*end of trade*/
 
 
+    /*spouse area*/
+
+    
+
+    $('.spouse_education_range').on('change',function () {
+
+        var education_function = $(this).val();
+
+        if (education_function <=1){
+
+            crs_calculate_object.spouse_edu = 0;
+            $('.spouse_education_text').text('Less than secondary school (high school)');
+
+        }
+        else if(education_function == 2){
+            crs_calculate_object.spouse_edu = 2;
+            $('.spouse_education_text').text('Secondary diploma (high school graduation)');
+
+        }
+        else if(education_function == 3){
+            crs_calculate_object.spouse_edu = 6;
+            $('.spouse_education_text').text('One-year degree, diploma or certificate from  a university, college, trade or technical school, or other institute');
+
+        }
+        else if(education_function == 4){
+            crs_calculate_object.spouse_edu = 7;
+            $('.spouse_education_text').text('Two-year program at a university, college, trade or technical school, or other institute');
+
+        }
+        else if(education_function == 5){
+            crs_calculate_object.spouse_edu = 8;
+            $('.spouse_education_text').text('Bachelor’s degree OR  a three or more year program at a university, college, trade or technical school, or other institute');
+
+        }
+        else if(education_function == 6){
+            crs_calculate_object.spouse_edu = 9;
+            $('.spouse_education_text').text('Two or more certificates, diplomas, or degrees. One must be for a program of three or more years');
+
+        }
+        else if(education_function == 7){
+            crs_calculate_object.spouse_edu = 10;
+            $('.spouse_education_text').text('Master’s degree, OR professional degree needed to practice in a licensed profession (For “professional degree,” the degree program must have been in: medicine, veterinary medicine, dentistry, optometry, law, chiropractic medicine, or pharmacy.)');
+
+        }
+        else if(education_function == 8){
+            crs_calculate_object.spouse_edu = 10;
+            $('.spouse_education_text').text('Doctoral level university degree (Ph.D.))');
+
+        }
+
+        console.log('edu_spouse'+crs_calculate_object.spouse_edu);
+
+    });
+
+
+    /*end of spouse area*/
+
+
+
+
     /*Provincial nomination?*/
 
     $('.provincial_btn').on('click',function () {
@@ -1436,6 +1496,34 @@ $(document).ready(function () {
     });
 
     /*end of family in canada*/
+
+
+    /*education in canada*/
+
+    $('.canada_education_range').on('change',function () {
+
+        var canada_education_value = $(this).val();
+        console.log(canada_education_value);
+        if (canada_education_value == 1){
+
+            $('.canada_education_text').text('Post-secondary education in  Canada – credential of one or two years');
+            crs_calculate_object.canadian_education = 15;
+        }
+        else if (canada_education_value == 2){
+
+            $('.canada_education_text').text('Post-secondary education in  Canada – credential three years or longer');
+            crs_calculate_object.canadian_education = 30;
+        }
+        else{
+            $('.canada_education_text').text('None');
+            crs_calculate_object.canadian_education = 0;
+        }
+
+        console.log(crs_calculate_object.canadian_education);
+
+    });
+
+    /*end of educcation in canada*/
 
     $('.btn-yes-no').click(function () {
 
