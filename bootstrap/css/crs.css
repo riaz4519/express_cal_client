@@ -206,9 +206,25 @@ input:checked + .slider-switch:before {
     padding-bottom: 3%;
 
 }
+
+
+/*end of padding*/
+
+/*spouse hide show*/
+
 .spouse-remove{
     display: none;
 }
 
-/*end of padding*/
+/*end spouse hide show*/
+
+/*ielts value hide show*/
+
+.ielts_remove{
+    display: none;
+}
+
+/*end of ielts value hide show*/
+
+
 

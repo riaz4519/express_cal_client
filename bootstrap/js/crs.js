@@ -4,6 +4,9 @@
 $(document).ready(function () {
 
 
+
+
+
     var crs_calculate_object = {
 
         marital_status:'SINGLE',
@@ -11,6 +14,7 @@ $(document).ready(function () {
         age_value:0,
 
         education_value:0,
+        ielts_status:'',
 
         ielts_value:{
                         listening:0,
@@ -21,6 +25,7 @@ $(document).ready(function () {
 
                         speaking:0
                     },
+        tef_status:'',
         tef_value:{
                     listening:0,
 
@@ -90,7 +95,7 @@ $(document).ready(function () {
 
             crs_calculate_object.marital_status = $(this).val();
 
-           // console.log(crs_calculate_object.marital_status);
+           console.log(crs_calculate_object.marital_status);
 
             $($('.spouse')).removeClass('spouse-remove');
 
@@ -354,8 +359,6 @@ $(document).ready(function () {
 
         console.log(crs_calculate_object.age_value);
 
-
-
     }
 
     /*for the age*/
@@ -469,6 +472,7 @@ $(document).ready(function () {
     }
 
     /*end of education function*/
+
     $('.education-range').on('change',function () {
 
 
@@ -481,7 +485,495 @@ $(document).ready(function () {
     });
 
 
+    /*ielts button*/
+    $('.ielts_status_btn').on('click',function () {
 
+       if ($(this).val() == 'YES'){
+           crs_calculate_object.ielts_status = $(this).val();
+
+           $('.ielts_results').slideDown('slow');
+           $('.ielts_text').text('Your Results of IELTS');
+
+       }
+       else{
+           crs_calculate_object.ielts_status = $(this).val();
+           $('.ielts_results').slideDown('slow');
+           $('.ielts_text').text('Your predicted Results of IELTS');
+       }
+
+    });
+
+    /*ielts button*/
+    
+    
+    /*function ilets listening*/
+    
+    function ielts_listening_change() {
+
+        var listening = $('.ielts_listening_range').val();
+        $('.ielts_listening_value').text(listening);
+
+
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+            if(listening <4.5){
+
+                crs_calculate_object.ielts_value.listening = 0;
+            }
+            else if(listening >=4.5 && listening<= 5){
+                crs_calculate_object.ielts_value.listening = 6;
+            }
+            else if(listening ==5.5){
+                crs_calculate_object.ielts_value.listening = 8;
+            }
+            else if(listening >= 6.5 && listening <=7.0){
+                crs_calculate_object.ielts_value.listening = 16;
+            }
+            else if(listening == 7.5){
+                crs_calculate_object.ielts_value.listening = 22;
+            }
+            else if(listening == 8.0){
+                crs_calculate_object.ielts_value.listening = 29;
+            }
+            else if(listening >= 8.5 && listening <=9){
+                crs_calculate_object.ielts_value.listening = 32;
+            }
+            console.log(crs_calculate_object.ielts_value.listening);
+
+        }else{
+
+            if(listening <4.5){
+
+                crs_calculate_object.ielts_value.listening = 0;
+            }
+            else if(listening >=4.5 && listening<= 5){
+                crs_calculate_object.ielts_value.listening = 6;
+            }
+            else if(listening ==5.5){
+                crs_calculate_object.ielts_value.listening = 9;
+            }
+            else if(listening >= 6.5 && listening <=7.0){
+                crs_calculate_object.ielts_value.listening = 17;
+            }
+            else if(listening == 7.5){
+                crs_calculate_object.ielts_value.listening = 23;
+            }
+            else if(listening == 8.0){
+                crs_calculate_object.ielts_value.listening = 31;
+            }
+            else if(listening >= 8.5 && listening <=9){
+                crs_calculate_object.ielts_value.listening = 34;
+            }
+            console.log(crs_calculate_object.ielts_value.listening);
+
+
+
+        }
+        
+    }
+    
+    /*end function ilets listening*/
+    
+
+    /*ielts listening */
+
+    $('.ielts_listening_range').on('change',function () {
+
+        ielts_listening_change();
+
+    });
+
+    /*end of itelst listening*/
+
+
+
+    /*function ilets reading*/
+
+    function ielts_reading_change() {
+
+        var reading = $('.ielts_reading_range').val();
+        $('.ielts_reading_value').text(reading);
+
+
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+            if(reading <3.5){
+
+                crs_calculate_object.ielts_value.listening = 0;
+            }
+            else if(reading >=3.5 && reading<= 4.5){
+                crs_calculate_object.ielts_value.reading = 6;
+            }
+            else if(reading >= 5 && reading <= 5.5){
+                crs_calculate_object.ielts_value.reading = 8;
+            }
+            else if(reading == 6){
+                crs_calculate_object.ielts_value.reading = 16;
+            }
+            else if(reading == 6.5){
+                crs_calculate_object.ielts_value.reading = 22;
+            }
+            else if(reading == 7.0){
+                crs_calculate_object.ielts_value.reading = 29;
+            }
+            else if(reading >= 7.5 && reading <=9){
+                crs_calculate_object.ielts_value.reading = 32;
+            }
+            console.log(crs_calculate_object.ielts_value.reading);
+
+        }else{
+
+            if(reading <3.5){
+
+                crs_calculate_object.ielts_value.listening = 0;
+            }
+            else if(reading >=3.5 && reading<= 4.5){
+                crs_calculate_object.ielts_value.reading = 6;
+            }
+            else if(reading >= 5 && reading <= 5.5){
+                crs_calculate_object.ielts_value.reading = 9;
+            }
+            else if(reading == 6){
+                crs_calculate_object.ielts_value.reading = 17;
+            }
+            else if(reading == 6.5){
+                crs_calculate_object.ielts_value.reading = 23;
+            }
+            else if(reading == 7.0){
+                crs_calculate_object.ielts_value.reading = 31;
+            }
+            else if(reading >= 7.4 && reading <=9){
+                crs_calculate_object.ielts_value.reading = 34;
+            }
+            console.log(crs_calculate_object.ielts_value.reading);
+
+
+
+        }
+
+    }
+
+    /*end function ilets reading*/
+
+
+    /*ielts reading */
+    $('.ielts_reading_range').on('change',function () {
+
+        ielts_reading_change();
+
+    });
+    /*end of ielts reading*/
+
+
+    function ielts_writing_change(){
+
+        var writing = $('.ielts_writing_range').val();
+        $('.ielts_writing_value').text(writing);
+
+
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+            if(writing <4){
+
+                crs_calculate_object.ielts_value.writing = 0;
+            }
+            else if(writing >=4 && writing<= 5){
+                crs_calculate_object.ielts_value.writing = 6;
+            }
+            else if( writing == 5.5){
+                crs_calculate_object.ielts_value.writing = 8;
+            }
+            else if(writing == 6){
+                crs_calculate_object.ielts_value.writing = 16;
+            }
+            else if(writing == 6.5){
+                crs_calculate_object.ielts_value.writing = 22;
+            }
+            else if(writing == 7.0){
+                crs_calculate_object.ielts_value.writing = 29;
+            }
+            else if(writing >= 7.5 && writing <=9){
+                crs_calculate_object.ielts_value.writing = 32;
+            }
+            console.log(crs_calculate_object.ielts_value.writing);
+
+        }else{
+
+            if(writing <4){
+
+                crs_calculate_object.ielts_value.writing = 0;
+            }
+            else if(writing >=4 && writing<= 5){
+                crs_calculate_object.ielts_value.writing = 6;
+            }
+            else if( writing == 5.5){
+                crs_calculate_object.ielts_value.writing = 9;
+            }
+            else if(writing == 6){
+                crs_calculate_object.ielts_value.writing = 17;
+            }
+            else if(writing == 6.5){
+                crs_calculate_object.ielts_value.writing = 23;
+            }
+            else if(writing == 7.0){
+                crs_calculate_object.ielts_value.writing = 31;
+            }
+            else if(writing >= 7.5 && writing <=9){
+                crs_calculate_object.ielts_value.writing = 34;
+            }
+            console.log(crs_calculate_object.ielts_value.writing);
+
+
+
+        }
+
+    }
+
+    /*ielts writing*/
+    $('.ielts_writing_range').on('change',function () {
+
+        ielts_writing_change();
+
+    });
+
+    /*end ielts writing**/
+
+
+
+    function ielts_speaking_change(){
+
+        var speaking = $('.ielts_speaking_range').val();
+        $('.ielts_speaking_value').text(speaking);
+
+
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+            if(speaking <4){
+
+                crs_calculate_object.ielts_value.speaking = 0;
+            }
+            else if(speaking >=4 && speaking<= 5){
+                crs_calculate_object.ielts_value.speaking = 6;
+            }
+            else if( speaking == 5.5){
+                crs_calculate_object.ielts_value.speaking = 8;
+            }
+            else if(speaking == 6){
+                crs_calculate_object.ielts_value.speaking = 16;
+            }
+            else if(speaking == 6.5){
+                crs_calculate_object.ielts_value.speaking = 22;
+            }
+            else if(speaking == 7.0){
+                crs_calculate_object.ielts_value.speaking = 29;
+            }
+            else if(speaking >= 7.5 && speaking <=9){
+                crs_calculate_object.ielts_value.speaking = 32;
+            }
+            console.log(crs_calculate_object.ielts_value.speaking);
+
+        }else{
+
+            if(speaking <4){
+
+                crs_calculate_object.ielts_value.speaking = 0;
+            }
+            else if(speaking >=4 && speaking<= 5){
+                crs_calculate_object.ielts_value.speaking = 6;
+            }
+            else if( speaking == 5.5){
+                crs_calculate_object.ielts_value.speaking = 9;
+            }
+            else if(speaking == 6){
+                crs_calculate_object.ielts_value.speaking = 17;
+            }
+            else if(speaking == 6.5){
+                crs_calculate_object.ielts_value.speaking = 23;
+            }
+            else if(speaking == 7.0){
+                crs_calculate_object.ielts_value.speaking = 31;
+            }
+            else if(speaking >= 7.5 && speaking <=9){
+                crs_calculate_object.ielts_value.speaking = 34;
+            }
+            console.log(crs_calculate_object.ielts_value.speaking);
+
+
+
+        }
+
+    }
+    /*ielts speaking*/
+    $('.ielts_speaking_range').on('change',function () {
+
+        ielts_speaking_change();
+
+    });
+
+    /*end ielts speaking**/
+
+
+    /*tef button*/
+    $('.tef_status_btn').on('click',function () {
+
+        if ($(this).val() == 'YES'){
+            crs_calculate_object.tef_status = $(this).val();
+
+            $('.tef_results').slideDown('slow');
+            $('.tef_text').text('Your Results of TEF');
+
+        }
+        else{
+            crs_calculate_object.tef_status = $(this).val();
+            $('.tef_results').slideDown('slow');
+            $('.tef_text').text('Your predicted Results of TEF');
+        }
+
+    });
+
+    /*end of tef button*/
+
+
+
+    function tef_listening_change() {
+
+        var listening = $('.tef_listening_range').val();
+        $('.tef_listening_value').text(listening);
+        if (listening < 181){
+
+            crs_calculate_object.tef_value.listening = 0;
+        }
+        else if (listening >=180 && listening <=248){
+
+            crs_calculate_object.tef_value.listening = 1;
+
+        }
+        else if (listening >=249 && listening <=297){
+
+            crs_calculate_object.tef_value.listening = 3;
+
+        }
+        else if (listening >=298 && listening <=415){
+
+            crs_calculate_object.tef_value.listening = 6;
+
+        }
+        console.log(crs_calculate_object.tef_value.listening);
+
+
+    }
+    /*tef listening*/
+
+    $('.tef_listening_range').on('change',function () {
+
+        tef_listening_change();
+
+    });
+    /*end tef listening*/
+
+
+    function tef_reading_change() {
+
+        var reading = $('.tef_reading_range').val();
+        $('.tef_reading_value').text(reading);
+        if (reading < 150){
+
+            crs_calculate_object.tef_value.reading = 0;
+        }
+        else if (reading >=150 && reading <=206){
+
+            crs_calculate_object.tef_value.reading = 1;
+
+        }
+        else if (reading >=207 && reading <=247){
+
+            crs_calculate_object.tef_value.reading = 3;
+
+        }
+        else if (reading >=248 && reading <=415){
+
+            crs_calculate_object.tef_value.reading = 6;
+
+        }
+        console.log(crs_calculate_object.tef_value.reading);
+
+
+    }
+
+    /*tef reading */
+    $('.tef_reading_range').on('change',function () {
+
+        tef_reading_change();
+    });
+
+    /*end of tef reading*/
+
+    function tef_writing_change() {
+
+        var writing = $('.tef_writing_range').val();
+        $('.tef_writing_value').text(writing);
+        if (writing < 226){
+
+            crs_calculate_object.tef_value.writing = 0;
+        }
+        else if (writing >=226 && writing <=309){
+
+            crs_calculate_object.tef_value.writing = 1;
+
+        }
+        else if (writing >=310 && writing <=370){
+
+            crs_calculate_object.tef_value.writing = 3;
+
+        }
+        else if (writing >=371 && writing <=415){
+
+            crs_calculate_object.tef_value.writing = 6;
+
+        }
+        console.log(crs_calculate_object.tef_value.writing);
+
+
+    }
+    /*tef writing*/
+    $('.tef_writing_range').on('change',function () {
+
+        tef_writing_change();
+    });
+
+    /*end of tef writing*/
+
+
+    function tef_speaking_change() {
+
+        var speaking = $('.tef_speaking_range').val();
+        $('.tef_speaking_value').text(speaking);
+        if (speaking < 226){
+
+            crs_calculate_object.tef_value.speaking = 0;
+        }
+        else if (speaking >=226 && speaking <=309){
+
+            crs_calculate_object.tef_value.speaking = 1;
+
+        }
+        else if (speaking >=310 && speaking <=370){
+
+            crs_calculate_object.tef_value.speaking = 3;
+
+        }
+        else if (speaking >=371 && speaking <=415){
+
+            crs_calculate_object.tef_value.speaking = 6;
+
+        }
+        console.log(crs_calculate_object.tef_value.speaking);
+
+
+    }
+    /*tef speaking*/
+    $('.tef_speaking_range').on('change',function () {
+
+        tef_speaking_change();
+    });
+
+    /*end of tef speaking*/
 
 
     $('.btn-yes-no').click(function () {
