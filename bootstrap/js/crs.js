@@ -71,6 +71,8 @@ $(document).ready(function () {
 
         canada_foreign_ex:0,
 
+        trade_status:'',
+
         language_trade:0,
 
         pro_nomination:0,
@@ -374,7 +376,9 @@ $(document).ready(function () {
 
     /*education function*/
 
-    function education_value(education_function) {
+    function education_value() {
+        var education_function = $('.education-range').val();
+
         if (crs_calculate_object.marital_status == 'SINGLE' || crs_calculate_object.marital_status == 'SEPARATED'){
 
             if (education_function <=1){
@@ -467,6 +471,8 @@ $(document).ready(function () {
         }
 
         console.log(crs_calculate_object.education_value);
+        education_language_trans();
+        canadian_work_education();
 
 
     }
@@ -475,12 +481,7 @@ $(document).ready(function () {
 
     $('.education-range').on('change',function () {
 
-
-    var education_function = $(this).val();
-
-    education_value(education_function);
-
-
+             education_value();
 
     });
 
@@ -539,7 +540,8 @@ $(document).ready(function () {
             }
             console.log(crs_calculate_object.ielts_value.listening);
 
-        }else{
+        }
+        else{
 
             if(listening <4.5){
 
@@ -568,6 +570,10 @@ $(document).ready(function () {
 
 
         }
+        education_language_trans();
+        foreign_work_language();
+        trade_language();
+
         
     }
     
@@ -619,7 +625,8 @@ $(document).ready(function () {
             }
             console.log(crs_calculate_object.ielts_value.reading);
 
-        }else{
+        }
+        else{
 
             if(reading <3.5){
 
@@ -648,6 +655,9 @@ $(document).ready(function () {
 
 
         }
+        education_language_trans();
+        foreign_work_language();
+        trade_language();
 
     }
 
@@ -694,7 +704,8 @@ $(document).ready(function () {
             }
             console.log(crs_calculate_object.ielts_value.writing);
 
-        }else{
+        }
+        else{
 
             if(writing <4){
 
@@ -723,6 +734,9 @@ $(document).ready(function () {
 
 
         }
+        education_language_trans();
+        foreign_work_language();
+        trade_language();
 
     }
 
@@ -741,6 +755,7 @@ $(document).ready(function () {
 
         var speaking = $('.ielts_speaking_range').val();
         $('.ielts_speaking_value').text(speaking);
+        trade_language();
 
 
         if (crs_calculate_object.marital_status == 'MARRIED'){
@@ -768,7 +783,8 @@ $(document).ready(function () {
             }
             console.log(crs_calculate_object.ielts_value.speaking);
 
-        }else{
+        }
+        else{
 
             if(speaking <4){
 
@@ -797,6 +813,8 @@ $(document).ready(function () {
 
 
         }
+        education_language_trans();
+        foreign_work_language();
 
     }
     /*ielts speaking*/
@@ -976,6 +994,383 @@ $(document).ready(function () {
     /*end of tef speaking*/
 
 
+
+    function canadian_work_ex_change() {
+        var canadian_work = $('.canadian_work_ex_range').val();
+        $('.canadian_work_ex_value').text(canadian_work+"y");
+
+
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+
+            if (canadian_work <1){
+                crs_calculate_object.work_canada = 0;
+            }
+            else if(canadian_work == 1){
+                crs_calculate_object.work_canada = 35;
+            }
+            else if(canadian_work == 2){
+                crs_calculate_object.work_canada = 46;
+            }
+            else if(canadian_work == 3){
+                crs_calculate_object.work_canada = 56;
+            }
+            else if(canadian_work == 4){
+                crs_calculate_object.work_canada = 63;
+            }
+            else if(canadian_work >=5){
+                crs_calculate_object.work_canada = 70;
+            }
+
+        }else{
+
+            if (canadian_work <1){
+                crs_calculate_object.work_canada = 0;
+            }
+            else if(canadian_work == 1){
+                crs_calculate_object.work_canada = 40;
+            }
+            else if(canadian_work == 2){
+                crs_calculate_object.work_canada = 53;
+            }
+            else if(canadian_work == 3){
+                crs_calculate_object.work_canada = 64;
+            }
+            else if(canadian_work == 4){
+                crs_calculate_object.work_canada = 72;
+            }
+            else if(canadian_work >=5){
+                crs_calculate_object.work_canada = 80;
+            }
+
+
+        }
+        console.log(crs_calculate_object.work_canada);
+        canadian_work_education();
+        foreign_canadian_work();
+
+    }
+    /*canadian work experience  */
+    $('.canadian_work_ex_range').on('change',function () {
+
+
+
+        canadian_work_ex_change();
+
+    });
+    /*end canadian work experience*/
+
+
+    /*education and language*/
+
+    function education_language_trans() {
+
+        var under7 = 0;
+        var under9 = 0;
+
+        /*console.log(typeof (crs_calculate_object.ielts_value));*/
+
+
+
+        /*finding the how many are under 7 and how many are under 9*/
+        for(var prop in crs_calculate_object.ielts_value){
+            var value = crs_calculate_object.ielts_value[prop];
+            if (value >= 16 && value <=28){
+                under7++;
+            }
+            else if(value >=29 && value<=34){
+                under9++;
+            }
+        }
+        console.log(under7);
+        console.log(under9);
+        /*end find*/
+
+        /*eudcatrion value*/
+        var education = crs_calculate_object.education_value;
+
+        /*decision making*/
+        if(under7 + under9 == 4){
+
+            if (under7 >=1){
+                if (education >= 84 && education <=111){
+                    crs_calculate_object.language_edu = 13;
+                }
+                if (education >= 112 && education <=150){
+                    crs_calculate_object.language_edu = 25;
+                }
+                else{
+                    crs_calculate_object.language_edu = 0;
+                }
+            }
+            else{
+
+                if (education >= 84 && education <=111){
+                    crs_calculate_object.language_edu = 25;
+                }
+                else if (education >= 112 && education <=150){
+                    crs_calculate_object.language_edu = 50;
+                }
+                else{
+                    crs_calculate_object.language_edu = 0;
+                }
+
+
+            }
+            console.log(crs_calculate_object.language_edu);
+        }
+        /*decision making*/
+
+
+
+
+    }
+
+    /*end of education and language*/
+
+
+
+    /*canadian experience and education level trans*/
+    function canadian_work_education() {
+
+        var canadian_work_value = crs_calculate_object.work_canada;
+        var education_value = crs_calculate_object.education_value;
+
+        if(canadian_work_value >= 35 && canadian_work_value <= 40){
+
+            if (education_value >= 84 && education_value <=111){
+                crs_calculate_object.canada_work_ex_edu_level = 13;
+            }
+            else if (education_value >= 112 && education_value <=150){
+                crs_calculate_object.canada_work_ex_edu_level = 25;
+            }
+            else{
+                crs_calculate_object.canada_work_ex_edu_level = 0;
+            }
+
+
+        }
+        else if(canadian_work_value >= 46 && canadian_work_value <= 80){
+
+            if (education_value >= 84 && education_value <=111){
+                crs_calculate_object.canada_work_ex_edu_level = 25;
+            }
+            else if (education_value >= 112 && education_value <=150){
+                crs_calculate_object.canada_work_ex_edu_level = 50;
+            }
+            else{
+                crs_calculate_object.canada_work_ex_edu_level = 0;
+            }
+
+
+        }
+        console.log(crs_calculate_object.canada_work_ex_edu_level);
+
+    }
+
+    /*end of canadian experience and education level*/
+
+
+
+
+    function foreign_work_change() {
+
+        var foreign_work_value = $('.foreign_work_range').val();
+        $('.foreign_work_value').text(foreign_work_value+"y");
+        crs_calculate_object.work_foreign = foreign_work_value;
+
+        console.log('foreign'+foreign_work_value);
+        foreign_work_language();
+        foreign_canadian_work();
+
+
+
+    }
+
+    /*foreign work experience*/
+
+    $('.foreign_work_range').on('change',function () {
+
+        foreign_work_change();
+
+    });
+
+    /*end of foreign work experience*/
+
+
+    /*foreign work and language*/
+
+    function foreign_work_language() {
+
+        var work_foreing_value = crs_calculate_object.work_foreign;
+
+        var under7 = 0;
+        var under9 = 0;
+
+
+        for(var prop in crs_calculate_object.ielts_value){
+            var value = crs_calculate_object.ielts_value[prop];
+            if (value >= 16 && value <=28){
+                under7++;
+            }
+            else if(value >=29 && value<=34){
+                under9++;
+            }
+        }
+        console.log(under7);
+        console.log(under9);
+        /*education value*/
+        var education = crs_calculate_object.education_value;
+
+        /*decision making*/
+        if(under7 + under9 == 4){
+
+            if (under7 >=1){
+                if (work_foreing_value <1){
+                    crs_calculate_object.language_foreign_ex = 0;
+                }
+                else if (work_foreing_value >=1 && work_foreing_value <=2){
+                    crs_calculate_object.language_foreign_ex = 13;
+                }
+                else if (work_foreing_value >=3){
+                    crs_calculate_object.language_foreign_ex = 25;
+                }
+            }
+            else{
+
+                if (work_foreing_value <1){
+                    crs_calculate_object.language_foreign_ex = 0;
+                }
+                else if (work_foreing_value >=1 && work_foreing_value <=2){
+                    crs_calculate_object.language_foreign_ex = 25;
+                }
+                else if (work_foreing_value >=3){
+                    crs_calculate_object.language_foreign_ex = 50;
+                }
+
+            }
+            console.log('f'+crs_calculate_object.language_foreign_ex);
+        }
+        /*decision making*/
+
+
+
+    }
+    
+    /*end of foreign and language */
+
+    /*foreign work and canadian work trans*/
+    
+    function foreign_canadian_work() {
+
+        var canadian_work_value = crs_calculate_object.work_canada;
+        var foreign_work_value = crs_calculate_object.work_foreign;
+
+        if (canadian_work_value == 40){
+
+            if (foreign_work_value >=1 && foreign_work_value <= 2){
+                crs_calculate_object.canada_foreign_ex = 13;
+            }
+            else if (foreign_work_value >=3){
+
+                crs_calculate_object.canada_foreign_ex = 25;
+            }
+            else{
+                crs_calculate_object.canada_foreign_ex = 0;
+            }
+        }
+        else if(canadian_work_value >40){
+
+            if (foreign_work_value >=1 && foreign_work_value <= 2){
+                crs_calculate_object.canada_foreign_ex = 25;
+            }
+            else if (foreign_work_value >=3){
+
+                crs_calculate_object.canada_foreign_ex = 50;
+            }
+            else{
+                crs_calculate_object.canada_foreign_ex = 0;
+            }
+        }
+
+        console.log('g'+crs_calculate_object.canada_foreign_ex);
+
+
+        
+    }
+
+    /*end of foreign work and canadian wrok trans*/
+
+
+    function trade_language() {
+
+        var under7 = 0;
+        var under9 = 0;
+        var under5 = 0;
+        var button_status = crs_calculate_object.trade_status;
+
+
+        if (button_status == 'YES'){
+
+
+            for(var prop in crs_calculate_object.ielts_value){
+                var value = crs_calculate_object.ielts_value[prop];
+
+                if (value >= 6 && value <=15){
+                    under5++;
+                }
+                else if (value >= 16 && value <=28){
+                    under7++;
+                }
+                else if(value >=29 && value<=34){
+                    under9++;
+                }
+
+            }
+
+
+            if (under5 + under7 + under9 == 4){
+
+                if (under5 >=1){
+                    crs_calculate_object.language_trade = 25;
+                }
+                else{
+                    crs_calculate_object.language_trade = 50;
+                }
+            }
+            else{
+                crs_calculate_object.language_trade = 0;
+            }
+
+        }
+        else{
+            crs_calculate_object.language_trade = 0;
+        }
+        console.log('trade'+crs_calculate_object.language_trade);
+
+    }
+
+    /*trade button click value calculation*/
+
+    $('.canadian_trade_btn').on('click',function () {
+
+
+        var button_value = $(this).val();
+
+        if (button_value == 'YES'){
+            crs_calculate_object.trade_status = button_value;
+            trade_language();
+        }
+        else{
+            crs_calculate_object.trade_status = button_value;
+            crs_calculate_object.language_trade = 0;
+
+        }
+
+
+    });
+
+    /*end of trade*/
+
     $('.btn-yes-no').click(function () {
 
         $(this).addClass('background-yellow');
@@ -1008,6 +1403,7 @@ $(document).ready(function () {
 
 
 */
+
 
 console.log(crs_calculate_object.marital_status);
 crs_calculate_object.age_value = 12;

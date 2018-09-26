@@ -434,12 +434,12 @@
                         </div>
 
                         <div class="col-6">
-                            <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="0" step="1" max="7" value="0" class="slider canadian_work_ex_range" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="canadian_work_ex_value">0</span></b>
 
                         </div>
 
@@ -461,12 +461,12 @@
                         </div>
 
                         <div class="col-6">
-                            <input type="range" min="0" max="5" step="1" value="0" class="slider" id="myRange">
+                            <input type="range" min="0" max="5" step="1" value="0" class="slider foreign_work_range" id="myRange">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="foreign_work_value">0</span></b>
 
                         </div>
 
@@ -489,8 +489,8 @@
 
                         <div class="col-6">
                             <div class="row justify-content-center ">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
-                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm canadian_trade_btn col-5 btn-yes-no" value="YES">
+                                <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm canadian_trade_btn col-5 btn-yes-no" value="NO">
 
                         </div>
 
