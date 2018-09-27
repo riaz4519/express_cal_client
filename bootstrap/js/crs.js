@@ -1378,6 +1378,7 @@ $(document).ready(function () {
         else{
             crs_calculate_object.trade_status = button_value;
             crs_calculate_object.language_trade = 0;
+            trade_language();
 
         }
 
@@ -1787,6 +1788,8 @@ function score_board() {
 
     var total_sum = 0;
     var married_sum = 0;
+    var additional_points_sum = 0;
+    var last_points_for_nomi = 0;
 
     var count = 0;
     var spouse = 0;
@@ -1795,30 +1798,82 @@ function score_board() {
     for(var prop in crs_calculate_object){
 
 
-        if ( prop == 'spouse_edu' || prop == 'spouse_work' || prop == 'spouse_ielts_status' || prop == 'spouse_ielts'){
 
-            spouse++;
-            var prop2 = crs_calculate_object[prop];
-            if (typeof (prop2) != 'string' ){
-
-                if (typeof (prop2) == "object"){
-                    for (var marrital_points in prop2){
-                       married_sum = married_sum + prop2[marrital_points];
-                    }
-                }else{
-
-                    married_sum = married_sum + prop2;
-
-                }
-
-            }
-        }
         var value = crs_calculate_object[prop];
 
 
         if (typeof (value) != 'string') {
 
-            if (typeof (value) == "object") {
+            if ( prop == 'spouse_edu' || prop == 'spouse_work' || prop == 'spouse_ielts_status' || prop == 'spouse_ielts'){
+                spouse++;
+                var prop2 = crs_calculate_object[prop];
+
+                if (crs_calculate_object.marital_status == 'MARRIED'){
+
+                    if (typeof (prop2) != 'string' ){
+
+                        if (typeof (prop2) == "object"){
+                            for (var marrital_points in prop2){
+                                married_sum = married_sum + prop2[marrital_points];
+                                total_sum = total_sum + prop2[marrital_points];
+                            }
+                        }else{
+
+                            married_sum = married_sum + prop2;
+                            total_sum = total_sum + prop2;
+
+                        }
+
+                    }
+                }
+
+
+
+            }
+
+            else if(prop == 'language_edu' || prop == 'canada_work_ex_edu_level' || prop == 'language_foreign_ex' || prop =='canada_foreign_ex' || prop == 'language_trade'){
+
+                var previous = additional_points_sum;
+
+                additional_points_sum = additional_points_sum + crs_calculate_object[prop];
+                console.log(additional_points_sum);
+                if(additional_points_sum >= 100){
+
+                    var difference = 100 - previous;
+                    if (difference > 1){
+
+                        total_sum = total_sum + difference;
+                        console.log(difference);
+                    }
+                    console.log('out : '+difference);
+
+
+                }else{
+                    total_sum = total_sum + crs_calculate_object[prop];
+                }
+
+
+            }
+            else if(prop == 'pro_nomination' || prop == 'offer_of_employment' || prop =='canadian_education' || prop == 'siblings_canada'){
+
+                var previous_here = last_points_for_nomi;
+
+                last_points_for_nomi = last_points_for_nomi + crs_calculate_object[prop];
+
+                if (last_points_for_nomi >= 600){
+
+                    var difference_here = 600 - previous_here;
+                    if (difference_here > 1){
+
+                        total_sum = total_sum + difference_here;
+                    }
+
+                }else{
+
+                    total_sum =  total_sum + crs_calculate_object[prop];
+                }
+            }
+            else if (typeof (value) == "object") {
 
                 for (var prop1 in value) {
                     total_sum = total_sum + value[prop1];
@@ -1835,12 +1890,16 @@ function score_board() {
 
 
     }
+   if (crs_calculate_object.marital_status == 'MARRIED'){
+
+   }
 
 
     console.log(spouse);
 
     console.log('marriend_sum :'+married_sum);
     console.log('total_sum :'+total_sum);
+    console.log(crs_calculate_object.language_trade);
 
 
 }
