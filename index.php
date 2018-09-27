@@ -573,10 +573,14 @@
                         <div class="col-12">
                             <div class="row justify-content-center ">
 
-                                <div class="col-11 text-center">
+                                <div class="col-10 text-center">
 
 
-                                    <input type="range" min="0" step="1" max="7" value="0" class="slider" id="myRange" data-show-value="true">
+                                    <input type="range" min="0" step="1" max="7" value="0" class="slider spouse_canadian_work_ex_range" id="myRange" data-show-value="true">
+
+                                </div>
+                                <div class="col-1">
+                                    <b><span class="spouse_canadian_work_ex_value">0</span></b>
 
                                 </div>
 
@@ -616,8 +620,8 @@
                 </div>
                 <div class="col-12 ">
                     <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius col-5 btn-yes-no" value="NO">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius spouse_ielts_btn col-5 btn-yes-no" value="YES">
+                        <input type="button" class="btn btn-outline-secondary  btn-sm no-border-radius spouse_ielts_btn col-5 btn-yes-no" value="NO">
                     </div>
 
 
@@ -632,13 +636,12 @@
 
             <!--ielts result  area-->
 
-            <div class="row justify-content-center padding-top-bottom grey-background spouse-remove spouse" >
+            <div class="row justify-content-center padding-top-bottom grey-background spouse_ielts_show ielts_remove spouse" >
 
 
                 <div class="col-12 text-center married-status-text  title-margin">
-                    <span ><b>Spouse IELTS Result</b></span>
+                    <span ><b class="spouse_ielts_text">Spouse IELTS Result</b></span>
                 </div>
-
                 <!--listening-->
                 <div class="col-12 mb-2">
                     <div class="row">
@@ -649,12 +652,12 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="4" step=".5" max="9" value="4" class="slider" id="myRange" data-show-value="true">
+                            <input type="range" min="3" step=".5" max="9" value="3"  class="slider spouse_ielts_listening_range" id="myRange" data-show-value="true">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="spouse_ielts_listening_value">0</span></b>
 
                         </div>
 
@@ -679,12 +682,12 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="3" max="9" step=".5" value="3" class="slider" id="myRange">
+                            <input type="range" min="3" max="9" step=".5" value="3" class="slider spouse_ielts_reading_range" id="myRange">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="spouse_ielts_reading_value">0</span></b>
 
                         </div>
 
@@ -710,12 +713,12 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider spouse_ielts_writing_range" id="myRange">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="spouse_ielts_writing_value">0</span></b>
 
                         </div>
 
@@ -740,12 +743,12 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider" id="myRange">
+                            <input type="range" min="3.5" max="9" step=".5" value="3.5" class="slider spouse_ielts_speaking_range" id="myRange">
 
                         </div>
                         <div class="col-1">
 
-                            <b><span>0</span></b>
+                            <b><span class="spouse_ielts_speaking_value">0</span></b>
 
                         </div>
 
@@ -764,155 +767,11 @@
 
 
 
-
             </div>
 
             <!--end of ielts result  area-->
 
-            <!--tef button area-->
 
-            <div class="row justify-content-center padding-top-bottom spouse-remove spouse" >
-
-
-                <div class="col-12 text-center married-status-text title-margin">
-                    <span ><b>Have Your spouse given TEF??</b></span>
-                </div>
-                <div class="col-12 ">
-                    <div class="row justify-content-center ">
-                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm  col-5 btn-yes-no" value="YES">
-                        <input type="button" class="btn btn-outline-secondary no-border-radius  btn-sm col-5 btn-yes-no" value="NO">
-                    </div>
-
-
-                </div>
-
-
-
-
-            </div>
-
-            <!--end of tef button area-->
-
-            <!--tef result  area-->
-
-            <div class="row justify-content-center padding-top-bottom grey-background spouse-remove spouse" >
-
-
-                <div class="col-12 text-center married-status-text  title-margin">
-                    <span ><b>Spouse TEF Result</b></span>
-                </div>
-                <div class="col-12 mb-2">
-                    <div class="row">
-                        <div class="col-2">
-
-                            <p style="font-size: .8rem"><b>Listening</b></p>
-
-                        </div>
-
-                        <div class="col-8">
-                            <input type="range" min="144" step="1" max="415" value="144" class="slider" id="myRange" data-show-value="true">
-
-                        </div>
-                        <div class="col-1">
-
-                            <b><span>0</span></b>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="col-12 mb-2">
-                    <div class="row">
-                        <div class="col-2">
-
-                            <p style="font-size: .8rem"><b>Reading</b></p>
-
-                        </div>
-
-                        <div class="col-8">
-                            <input type="range" min="120" max="415" step="1" value="120" class="slider" id="myRange">
-
-                        </div>
-                        <div class="col-1">
-
-                            <b><span>0</span></b>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="col-12 mb-2">
-                    <div class="row">
-                        <div class="col-2">
-
-                            <p style="font-size: .8rem"><b>writing</b></p>
-
-                        </div>
-
-                        <div class="col-8">
-                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
-
-                        </div>
-                        <div class="col-1">
-
-                            <b><span>0</span></b>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="col-12 mb-2">
-                    <div class="row">
-                        <div class="col-2">
-
-                            <p style="font-size: .8rem"><b>Speaking</b></p>
-
-                        </div>
-
-                        <div class="col-8">
-                            <input type="range" min="180" max="415" step="1" value="180" class="slider" id="myRange">
-
-                        </div>
-                        <div class="col-1">
-
-                            <b><span>0</span></b>
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
-
-            </div>
-
-            <!--end of tef result  area-->
 
 
 

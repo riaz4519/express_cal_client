@@ -45,6 +45,8 @@ $(document).ready(function () {
 
         spouse_work:0,
 
+        spouse_ielts_status:'',
+
         spouse_ielts:{
                         listening:0,
 
@@ -1374,7 +1376,8 @@ $(document).ready(function () {
 
     /*spouse area*/
 
-    
+
+    /*spouse education */
 
     $('.spouse_education_range').on('change',function () {
 
@@ -1425,6 +1428,215 @@ $(document).ready(function () {
         console.log('edu_spouse'+crs_calculate_object.spouse_edu);
 
     });
+
+    /*end of spouse education*/
+
+
+    function spouse_canadian_work_change() {
+
+        var spouse_canadian_work_ex_value = $('.spouse_canadian_work_ex_range').val();
+
+        $('.spouse_canadian_work_ex_value').text(spouse_canadian_work_ex_value+'y');
+
+
+
+            if (spouse_canadian_work_ex_value <1){
+                crs_calculate_object.spouse_work = 0;
+            }
+            else if(spouse_canadian_work_ex_value == 1){
+                crs_calculate_object.spouse_work = 5;
+            }
+            else if(spouse_canadian_work_ex_value == 2){
+                crs_calculate_object.spouse_work = 7;
+            }
+            else if(spouse_canadian_work_ex_value == 3){
+                crs_calculate_object.spouse_work = 8;
+            }
+            else if(spouse_canadian_work_ex_value == 4){
+                crs_calculate_object.spouse_work = 9;
+            }
+            else if(spouse_canadian_work_ex_value >=5){
+                crs_calculate_object.spouse_work = 10;
+            }
+
+            console.log('spouse work : '+crs_calculate_object.spouse_work);
+
+    }
+
+    /*spouse canadian experience*/
+
+    $('.spouse_canadian_work_ex_range').on('change',function () {
+
+
+        spouse_canadian_work_change();
+
+    });
+
+    /*end of  spouse canadian experience*/
+
+
+    /* spouse ielts button*/
+    $('.spouse_ielts_btn').on('click',function () {
+
+        if ($(this).val() == 'YES'){
+            crs_calculate_object.spouse_ielts_status = $(this).val();
+
+            $('.spouse_ielts_show').slideDown('slow');
+            $('.spouse_ielts_text').text('spouse Results of IELTS');
+
+        }
+        else{
+            crs_calculate_object.spouse_ielts_status = $(this).val();
+            $('.spouse_ielts_show').slideDown('slow');
+            $('.spouse_ielts_text').text('spouse predicted Results of IELTS');
+        }
+
+    });
+
+    /*spouse ielts button*/
+
+    /*spouse ielts listening*/
+
+    function spouse_ielts_listening_change() {
+
+        var listening = $('.spouse_ielts_listening_range').val();
+        $('.spouse_ielts_listening_value').text(listening);
+
+
+
+            if(listening <=4.5){
+
+                crs_calculate_object.spouse_ielts.listening = 0;
+            }
+            else if(listening >=5 && listening<= 5.5){
+                crs_calculate_object.spouse_ielts.listening = 1;
+            }
+            else if(listening >=6 && listening <= 7.5){
+                crs_calculate_object.spouse_ielts.listening = 3;
+            }
+            else if(listening >=8){
+                crs_calculate_object.spouse_ielts.listening = 5;
+            }
+
+            console.log(crs_calculate_object.spouse_ielts.listening);
+
+        }
+
+    $('.spouse_ielts_listening_range').on('change',function () {
+
+        spouse_ielts_listening_change();
+
+    });
+
+    /*end spouse ielts listening*/
+
+    /*spouse ielts reading*/
+
+    function spouse_ielts_reading_change() {
+
+        var reading = $('.spouse_ielts_reading_range').val();
+        $('.spouse_ielts_reading_value').text(reading);
+
+
+
+        if(reading <=3.5){
+
+            crs_calculate_object.spouse_ielts.reading = 0;
+        }
+        else if(reading >=4 && reading<= 5.5){
+            crs_calculate_object.spouse_ielts.reading = 1;
+        }
+        else if(reading >=6 && reading <= 6.5){
+            crs_calculate_object.spouse_ielts.reading = 3;
+        }
+        else if(reading >=7){
+            crs_calculate_object.spouse_ielts.reading = 5;
+        }
+
+        console.log(crs_calculate_object.spouse_ielts.reading);
+
+    }
+
+    $('.spouse_ielts_reading_range').on('change',function () {
+
+        spouse_ielts_reading_change();
+
+    });
+
+    /*end spouse ielts reading*/
+
+    /*spouse ielts writing*/
+
+    function spouse_ielts_writing_change() {
+
+        var writing = $('.spouse_ielts_writing_range').val();
+        $('.spouse_ielts_writing_value').text(writing);
+
+
+
+        if(writing <=4.5){
+
+            crs_calculate_object.spouse_ielts.writing = 0;
+        }
+        else if(writing >=5 && writing<= 5.5){
+            crs_calculate_object.spouse_ielts.writing = 1;
+        }
+        else if(writing >=6 && writing <= 6.5){
+            crs_calculate_object.spouse_ielts.writing = 3;
+        }
+        else if(writing >=7){
+            crs_calculate_object.spouse_ielts.writing = 5;
+        }
+
+        console.log(crs_calculate_object.spouse_ielts.writing);
+
+    }
+
+    $('.spouse_ielts_writing_range').on('change',function () {
+
+        spouse_ielts_writing_change();
+
+    });
+
+    /*end spouse ielts writing*/
+
+    /*spouse ielts speaking*/
+
+    function spouse_ielts_speaking_change() {
+
+        var speaking = $('.spouse_ielts_speaking_range').val();
+        $('.spouse_ielts_speaking_value').text(speaking);
+
+
+
+        if(speaking <=4.5){
+
+            crs_calculate_object.spouse_ielts.speaking = 0;
+        }
+        else if(speaking >=5 && speaking<= 5.5){
+            crs_calculate_object.spouse_ielts.speaking = 1;
+        }
+        else if(speaking >=6 && speaking <= 6.5){
+            crs_calculate_object.spouse_ielts.speaking = 3;
+        }
+        else if(speaking >=7){
+            crs_calculate_object.spouse_ielts.speaking = 5;
+        }
+
+        console.log(crs_calculate_object.spouse_ielts.speaking);
+
+    }
+
+    $('.spouse_ielts_speaking_range').on('change',function () {
+
+        spouse_ielts_speaking_change();
+
+    });
+
+    /*end spouse ielts speaking/
+
+
+
 
 
     /*end of spouse area*/
