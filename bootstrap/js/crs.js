@@ -56,15 +56,6 @@ $(document).ready(function () {
 
                         speaking:0
                      },
-        spouse_tef:{
-                    listening:0,
-
-                    reading:0,
-
-                    writing:0,
-
-                    speaking:0
-                    },
         language_edu:0,
 
         canada_work_ex_edu_level:0,
@@ -111,13 +102,35 @@ $(document).ready(function () {
             console.log(crs_calculate_object.marital_status);
         }
 
+        age_value();
+        education_value();
+        marrital_ielts_change();
+
+
     });
+
+    function marrital_ielts_change() {
+
+        ielts_listening_change();
+        ielts_reading_change();
+        ielts_writing_change();
+        ielts_speaking_change();
+        canadian_work_ex_change();
+        foreign_work_change();
+        score_board();
+
+
+
+    }
 
     /*end of married status change*/
 
 
 
-    function age_value(age) {
+    function age_value() {
+
+        var age = $('.age-range').val();
+        $('.age-change').text(age);
 
         if (crs_calculate_object.marital_status == 'SINGLE' || crs_calculate_object.marital_status == 'SEPARATED'){
             if (age <= 17) {
@@ -362,6 +375,7 @@ $(document).ready(function () {
         }
 
         console.log(crs_calculate_object.age_value);
+        score_board();
 
     }
 
@@ -369,9 +383,8 @@ $(document).ready(function () {
 
     $('.age-range').on('change',function () {
 
-        var age = $(this).val();
-        $('.age-change').text(age);
-        age_value(age);
+
+        age_value();
 
     })
     /*end of for the age*/
@@ -1770,10 +1783,74 @@ $(document).ready(function () {
 
 */
 
+function score_board() {
+
+    var total_sum = 0;
+    var married_sum = 0;
+
+    var count = 0;
+    var spouse = 0;
+
+
+    for(var prop in crs_calculate_object){
+
+
+        if ( prop == 'spouse_edu' || prop == 'spouse_work' || prop == 'spouse_ielts_status' || prop == 'spouse_ielts'){
+
+            spouse++;
+            var prop2 = crs_calculate_object[prop];
+            if (typeof (prop2) != 'string' ){
+
+                if (typeof (prop2) == "object"){
+                    for (var marrital_points in prop2){
+                       married_sum = married_sum + prop2[marrital_points];
+                    }
+                }else{
+
+                    married_sum = married_sum + prop2;
+
+                }
+
+            }
+        }
+        var value = crs_calculate_object[prop];
+
+
+        if (typeof (value) != 'string') {
+
+            if (typeof (value) == "object") {
+
+                for (var prop1 in value) {
+                    total_sum = total_sum + value[prop1];
+                }
+
+            }else{
+
+                total_sum = total_sum + value;
+
+            }
+        }
+
+        console.log(crs_calculate_object[prop]);
+
+
+    }
+
+
+    console.log(spouse);
+
+    console.log('marriend_sum :'+married_sum);
+    console.log('total_sum :'+total_sum);
+
+
+}
+
 
 console.log(crs_calculate_object.marital_status);
-crs_calculate_object.age_value = 12;
-console.log(crs_calculate_object.spouse_ielts.listening);
+
+
+
+score_board();
 
 
 
