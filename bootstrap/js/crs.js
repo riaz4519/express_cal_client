@@ -854,8 +854,8 @@ $(document).ready(function () {
         }
         else{
             crs_calculate_object.tef_status = $(this).val();
-            $('.tef_results').slideDown('slow');
-            $('.tef_text').text('Your predicted Results of TEF');
+/*            $('.tef_results').slideDown('slow');
+            $('.tef_text').text('Your predicted Results of TEF');*/
         }
 
     });
