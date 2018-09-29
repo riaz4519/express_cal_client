@@ -102,21 +102,23 @@ $(document).ready(function () {
             console.log(crs_calculate_object.marital_status);
         }
 
-        age_value();
-        education_value();
+
         marrital_ielts_change();
 
 
     });
 
     function marrital_ielts_change() {
-
+        age_value();
+        education_value();
         ielts_listening_change();
         ielts_reading_change();
         ielts_writing_change();
         ielts_speaking_change();
         canadian_work_ex_change();
+
         foreign_work_change();
+
         score_board();
 
 
@@ -210,7 +212,7 @@ $(document).ready(function () {
             else if (age == 39) {
 
                 crs_calculate_object.age_value = 55;
-                console.log('age');
+
 
             }
             else if (age == 40) {
@@ -256,125 +258,124 @@ $(document).ready(function () {
             if (age <= 17) {
 
                 crs_calculate_object.age_value = 0;
-                console.log('age');
+
 
             }
             else if (age == 18) {
 
                 crs_calculate_object.age_value = 90;
-                console.log('age');
+
 
             }
             else if (age == 19) {
 
                 crs_calculate_object.age_value = 95;
-                console.log('age');
 
             }
             else if (age >= 20 && age <= 29) {
 
                 crs_calculate_object.age_value = 100;
-                console.log('age');
+
 
             }
             else if (age == 30) {
 
                 crs_calculate_object.age_value = 95;
-                console.log('age');
+
 
             }
             else if (age == 31) {
 
                 crs_calculate_object.age_value = 90;
-                console.log('age');
+
 
             }
             else if (age == 32) {
 
                 crs_calculate_object.age_value = 85;
-                console.log('age');
+
 
             } else if (age == 33) {
 
                 crs_calculate_object.age_value = 80;
-                console.log('age');
+
 
             } else if (age == 34) {
 
                 crs_calculate_object.age_value = 75;
-                console.log('age');
+
 
             }
             else if (age == 35) {
 
                 crs_calculate_object.age_value = 70;
-                console.log('age');
+
 
             }
             else if (age == 36) {
 
                 crs_calculate_object.age_value = 65;
-                console.log('age');
+
 
             }
             else if (age == 37) {
 
                 crs_calculate_object.age_value = 60;
-                console.log('age');
+
 
             }
             else if (age == 38) {
 
                 crs_calculate_object.age_value = 55;
-                console.log('age');
+
 
             }
             else if (age == 39) {
 
                 crs_calculate_object.age_value = 50;
-                console.log('age');
+
 
             }
             else if (age == 40) {
 
                 crs_calculate_object.age_value = 40;
-                console.log('age');
+
 
             }
             else if (age == 41) {
 
                 crs_calculate_object.age_value = 35;
-                console.log('age');
+
 
             }
             else if (age == 42) {
 
                 crs_calculate_object.age_value = 25;
-                console.log('age');
+
 
             }
             else if (age == 43) {
 
                 crs_calculate_object.age_value = 15;
-                console.log('age');
+
 
             }
             else if (age == 44) {
 
                 crs_calculate_object.age_value = 5;
-                console.log('age');
+
 
             }
             else if (age >= 45) {
 
                 crs_calculate_object.age_value = 0;
-                console.log('age');
+
 
             }
 
         }
 
-        console.log(crs_calculate_object.age_value);
+        console.log('age value : ' +crs_calculate_object.age_value);
         score_board();
 
     }
@@ -485,9 +486,10 @@ $(document).ready(function () {
 
         }
 
-        console.log(crs_calculate_object.education_value);
+        console.log('education : '+crs_calculate_object.education_value);
         education_language_trans();
         canadian_work_education();
+        score_board();
 
 
     }
@@ -588,6 +590,7 @@ $(document).ready(function () {
         education_language_trans();
         foreign_work_language();
         trade_language();
+        score_board();
 
         
     }
@@ -665,14 +668,13 @@ $(document).ready(function () {
             else if(reading >= 7.4 && reading <=9){
                 crs_calculate_object.ielts_value.reading = 34;
             }
-            console.log(crs_calculate_object.ielts_value.reading);
-
-
 
         }
+        console.log('ielts_reading : '+crs_calculate_object.ielts_value.reading);
         education_language_trans();
         foreign_work_language();
         trade_language();
+        score_board();
 
     }
 
@@ -744,14 +746,16 @@ $(document).ready(function () {
             else if(writing >= 7.5 && writing <=9){
                 crs_calculate_object.ielts_value.writing = 34;
             }
-            console.log(crs_calculate_object.ielts_value.writing);
+
 
 
 
         }
+        console.log('ielts writing : '+crs_calculate_object.ielts_value.writing);
         education_language_trans();
         foreign_work_language();
         trade_language();
+        score_board();
 
     }
 
@@ -823,13 +827,15 @@ $(document).ready(function () {
             else if(speaking >= 7.5 && speaking <=9){
                 crs_calculate_object.ielts_value.speaking = 34;
             }
-            console.log(crs_calculate_object.ielts_value.speaking);
+
 
 
 
         }
+        console.log('ielts speaking : '+crs_calculate_object.ielts_value.speaking);
         education_language_trans();
         foreign_work_language();
+        score_board();
 
     }
     /*ielts speaking*/
@@ -887,7 +893,9 @@ $(document).ready(function () {
             crs_calculate_object.tef_value.listening = 6;
 
         }
-        console.log(crs_calculate_object.tef_value.listening);
+        console.log('tef lis : '+crs_calculate_object.tef_value.listening);
+
+        score_board();
 
 
     }
@@ -924,7 +932,8 @@ $(document).ready(function () {
             crs_calculate_object.tef_value.reading = 6;
 
         }
-        console.log(crs_calculate_object.tef_value.reading);
+        console.log('tef read : '+crs_calculate_object.tef_value.reading);
+        score_board();
 
 
     }
@@ -960,7 +969,8 @@ $(document).ready(function () {
             crs_calculate_object.tef_value.writing = 6;
 
         }
-        console.log(crs_calculate_object.tef_value.writing);
+        console.log('tef writing : '+crs_calculate_object.tef_value.writing);
+        score_board();
 
 
     }
@@ -996,7 +1006,9 @@ $(document).ready(function () {
             crs_calculate_object.tef_value.speaking = 6;
 
         }
-        console.log(crs_calculate_object.tef_value.speaking);
+        console.log('tef speaking : '+crs_calculate_object.tef_value.speaking);
+
+        score_board();
 
 
     }
@@ -1036,7 +1048,8 @@ $(document).ready(function () {
                 crs_calculate_object.work_canada = 70;
             }
 
-        }else{
+        }
+        else{
 
             if (canadian_work <1){
                 crs_calculate_object.work_canada = 0;
@@ -1059,9 +1072,10 @@ $(document).ready(function () {
 
 
         }
-        console.log(crs_calculate_object.work_canada);
+        console.log('canadian work + '+crs_calculate_object.work_canada);
         canadian_work_education();
         foreign_canadian_work();
+        score_board();
 
     }
     /*canadian work experience  */
@@ -1096,8 +1110,7 @@ $(document).ready(function () {
                 under9++;
             }
         }
-        console.log(under7);
-        console.log(under9);
+
         /*end find*/
 
         /*eudcatrion value*/
@@ -1131,9 +1144,13 @@ $(document).ready(function () {
 
 
             }
-            console.log(crs_calculate_object.language_edu);
+
         }
         /*decision making*/
+
+        console.log('language education : '+crs_calculate_object.language_edu);
+
+        score_board();
 
 
 
@@ -1178,7 +1195,8 @@ $(document).ready(function () {
 
 
         }
-        console.log(crs_calculate_object.canada_work_ex_edu_level);
+        console.log('work canada edu : '+crs_calculate_object.canada_work_ex_edu_level);
+        score_board();
 
     }
 
@@ -1193,7 +1211,7 @@ $(document).ready(function () {
         $('.foreign_work_value').text(foreign_work_value+"y");
         crs_calculate_object.work_foreign = foreign_work_value;
 
-        console.log('foreign'+foreign_work_value);
+        console.log('foreign : '+foreign_work_value);
         foreign_work_language();
         foreign_canadian_work();
 
@@ -1231,8 +1249,7 @@ $(document).ready(function () {
                 under9++;
             }
         }
-        console.log(under7);
-        console.log(under9);
+
         /*education value*/
         var education = crs_calculate_object.education_value;
 
@@ -1263,11 +1280,12 @@ $(document).ready(function () {
                 }
 
             }
-            console.log('f'+crs_calculate_object.language_foreign_ex);
+
         }
         /*decision making*/
 
-
+        console.log('foreign  and language : '+crs_calculate_object.language_foreign_ex);
+        score_board();
 
     }
     
@@ -1307,7 +1325,7 @@ $(document).ready(function () {
             }
         }
 
-        console.log('g'+crs_calculate_object.canada_foreign_ex);
+        console.log('foreing  cana : '+crs_calculate_object.canada_foreign_ex);
 
 
         
@@ -1361,6 +1379,7 @@ $(document).ready(function () {
             crs_calculate_object.language_trade = 0;
         }
         console.log('trade'+crs_calculate_object.language_trade);
+        score_board();
 
     }
 
@@ -1475,6 +1494,8 @@ $(document).ready(function () {
 
             console.log('spouse work : '+crs_calculate_object.spouse_work);
 
+            score_board();
+
     }
 
     /*spouse canadian experience*/
@@ -1532,7 +1553,8 @@ $(document).ready(function () {
                 crs_calculate_object.spouse_ielts.listening = 5;
             }
 
-            console.log(crs_calculate_object.spouse_ielts.listening);
+            console.log('spouse listening : '+crs_calculate_object.spouse_ielts.listening);
+            score_board();
 
         }
 
@@ -1567,7 +1589,8 @@ $(document).ready(function () {
             crs_calculate_object.spouse_ielts.reading = 5;
         }
 
-        console.log(crs_calculate_object.spouse_ielts.reading);
+        console.log('spouse reading : '+crs_calculate_object.spouse_ielts.reading);
+        score_board();
 
     }
 
@@ -1602,7 +1625,7 @@ $(document).ready(function () {
             crs_calculate_object.spouse_ielts.writing = 5;
         }
 
-        console.log(crs_calculate_object.spouse_ielts.writing);
+        console.log('spouse writing : '+crs_calculate_object.spouse_ielts.writing);
 
     }
 
@@ -1637,7 +1660,8 @@ $(document).ready(function () {
             crs_calculate_object.spouse_ielts.speaking = 5;
         }
 
-        console.log(crs_calculate_object.spouse_ielts.speaking);
+        console.log('spouse writing : '+crs_calculate_object.spouse_ielts.speaking);
+        score_board();
 
     }
 
@@ -1671,7 +1695,8 @@ $(document).ready(function () {
             crs_calculate_object.pro_nomination = 0;
         }
 
-        console.log('nomi'+crs_calculate_object.pro_nomination);
+        console.log('nomi : '+crs_calculate_object.pro_nomination);
+        score_board();
 
     });
 
@@ -1697,7 +1722,8 @@ $(document).ready(function () {
             crs_calculate_object.offer_of_employment = 0;
 
         }
-        console.log(crs_calculate_object.offer_of_employment);
+        console.log('offer canada : '+crs_calculate_object.offer_of_employment);
+        score_board();
 
     });
 
@@ -1717,7 +1743,8 @@ $(document).ready(function () {
         else{
             crs_calculate_object.siblings_canada = 0;
         }
-        console.log('sibling'+crs_calculate_object.siblings_canada);
+        console.log('sibling : '+crs_calculate_object.siblings_canada);
+        score_board();
 
     });
 
@@ -1745,7 +1772,8 @@ $(document).ready(function () {
             crs_calculate_object.canadian_education = 0;
         }
 
-        console.log(crs_calculate_object.canadian_education);
+        console.log('education canada : '+crs_calculate_object.canadian_education);
+        score_board();
 
     });
 
@@ -1761,28 +1789,60 @@ $(document).ready(function () {
 
 
 
+    function score_send(){
+
+        var count = 0;
+        var store = [];
+
+        for (var first_dimension in crs_calculate_object){
+
+            var dimension1 = crs_calculate_object[first_dimension];
+
+            if (typeof (dimension1) == "object"){
 
 
-/*
+                for (var second_dimension in dimension1){
 
-    $('input[name=married]').on('click',function () {
+                    store[first_dimension+'_'+second_dimension] = dimension1[second_dimension];
+                }
 
-        var married_value = null;
 
-        $('.married').each(function () {
+            }
+            else{
+               store[first_dimension] = dimension1;
+            }
 
-            if ($(this).hasClass('background-yellow')){
 
-                married_value = $(this).val();
+        }
+
+
+        console.log(store['marital_status'])
+        $.ajax({
+            type: "POST",
+            url: 'process.php',
+            data: {"students" :store},
+            cache: false,
+            success: function(result){
+                alert(result);
             }
         });
 
-        console.log(married_value);
+    }
+
+
+
+    /*send button*/
+
+    $('.send-button').click(function () {
+
+        score_send();
+
 
     });
 
+    /*end send button*/
 
-*/
+
 
 function score_board() {
 
@@ -1836,16 +1896,16 @@ function score_board() {
                 var previous = additional_points_sum;
 
                 additional_points_sum = additional_points_sum + crs_calculate_object[prop];
-                console.log(additional_points_sum);
+
                 if(additional_points_sum >= 100){
 
                     var difference = 100 - previous;
                     if (difference > 1){
 
                         total_sum = total_sum + difference;
-                        console.log(difference);
+
                     }
-                    console.log('out : '+difference);
+
 
 
                 }else{
@@ -1886,30 +1946,31 @@ function score_board() {
             }
         }
 
-        console.log(crs_calculate_object[prop]);
+
 
 
     }
-   if (crs_calculate_object.marital_status == 'MARRIED'){
-
-   }
 
 
-    console.log(spouse);
+
+
 
     console.log('marriend_sum :'+married_sum);
     console.log('total_sum :'+total_sum);
-    console.log(crs_calculate_object.language_trade);
+
 
 
 }
 
 
+
+
+
+
 console.log(crs_calculate_object.marital_status);
 
-
-
 score_board();
+
 
 
 

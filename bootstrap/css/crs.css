@@ -227,4 +227,43 @@ input:checked + .slider-switch:before {
 /*end of ielts value hide show*/
 
 
+/*modal design*/
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+    .modal-dialog {
+        min-height: calc(100vh - 20px);
+    }
+}
+
+.modal-button-css{
+
+    border-radius: 0px;
+    background-color: #FEEF1C;
+    border-color: transparent;
+    color: black;
+
+
+}
+.modal-button-css:hover{
+
+    border-radius: 0px;
+    background-color: #F7D714;
+    border-color: transparent;
+
+
+}
+.input-field{
+    border-radius: 0px;
+}
+
+
+/*end of modal button design*/
+
+
 
