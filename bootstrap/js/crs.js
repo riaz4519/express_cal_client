@@ -14,7 +14,7 @@ $(document).ready(function () {
         age_value:0,
 
         education_value:0,
-        ielts_status:'',
+        ielts_status:'NULL',
 
         ielts_value:{
                         listening:0,
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
                         speaking:0
                     },
-        tef_status:'',
+        tef_status:'NULL',
         tef_value:{
                     listening:0,
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
         spouse_work:0,
 
-        spouse_ielts_status:'',
+        spouse_ielts_status:'NULL',
 
         spouse_ielts:{
                         listening:0,
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
         canada_foreign_ex:0,
 
-        trade_status:'',
+        trade_status:'NULL',
 
         language_trade:0,
 
@@ -1100,6 +1100,8 @@ $(document).ready(function () {
 
 
 
+
+
         /*finding the how many are under 7 and how many are under 9*/
         for(var prop in crs_calculate_object.ielts_value){
             var value = crs_calculate_object.ielts_value[prop];
@@ -1119,11 +1121,33 @@ $(document).ready(function () {
         /*decision making*/
         if(under7 + under9 == 4){
 
+            var startpoint13 = 0;
+            var endpoints13 = 0;
+            var startpoint25 = 0;
+            var endpoints25 = 0;
+            if (crs_calculate_object.marital_status == 'MARRIED'){
+                startpoint13 = 84;
+                endpoints13 = 112;
+                startpoint25 = 119;
+                endpoints25 = 140;
+
+
+
+            }else {
+                startpoint13 = 90;
+                endpoints13 = 120;
+                startpoint25 = 128;
+                endpoints25 = 150;
+
+                console.log('here');
+
+            }
+
             if (under7 >=1){
-                if (education >= 84 && education <=111){
+                if (education >= startpoint13 && education <=endpoints13){
                     crs_calculate_object.language_edu = 13;
                 }
-                if (education >= 112 && education <=150){
+                else if (education >= startpoint25 && education <=endpoints25){
                     crs_calculate_object.language_edu = 25;
                 }
                 else{
@@ -1132,10 +1156,10 @@ $(document).ready(function () {
             }
             else{
 
-                if (education >= 84 && education <=111){
+                if (education >= startpoint13 && education <=endpoints13){
                     crs_calculate_object.language_edu = 25;
                 }
-                else if (education >= 112 && education <=150){
+                else if (education >= startpoint25 && education <=endpoints25){
                     crs_calculate_object.language_edu = 50;
                 }
                 else{
@@ -1164,15 +1188,36 @@ $(document).ready(function () {
     /*canadian experience and education level trans*/
     function canadian_work_education() {
 
+
+        var startpoint13 = 0;
+        var endpoints13 = 0;
+        var startpoint125 = 0;
+        var endpoints25 = 0;
+        if (crs_calculate_object.marital_status == 'MARRIED'){
+            startpoint13 = 84;
+            endpoints13 = 112;
+            startpoint125 = 119;
+            endpoints25 = 140;
+
+
+
+        }else {
+            startpoint13 = 90;
+            endpoints13 = 120;
+            startpoint125 = 128;
+            endpoints25 = 150;
+
+        }
+
         var canadian_work_value = crs_calculate_object.work_canada;
         var education_value = crs_calculate_object.education_value;
 
         if(canadian_work_value >= 35 && canadian_work_value <= 40){
 
-            if (education_value >= 84 && education_value <=111){
+            if (education_value >= startpoint13 && education_value <=endpoints13){
                 crs_calculate_object.canada_work_ex_edu_level = 13;
             }
-            else if (education_value >= 112 && education_value <=150){
+            else if (education_value >= startpoint125 && education_value <=endpoints25){
                 crs_calculate_object.canada_work_ex_edu_level = 25;
             }
             else{
@@ -1183,10 +1228,10 @@ $(document).ready(function () {
         }
         else if(canadian_work_value >= 46 && canadian_work_value <= 80){
 
-            if (education_value >= 84 && education_value <=111){
+            if (education_value >= startpoint13 && education_value <=endpoints13){
                 crs_calculate_object.canada_work_ex_edu_level = 25;
             }
-            else if (education_value >= 112 && education_value <=150){
+            else if (education_value >= startpoint125 && education_value <=endpoints25){
                 crs_calculate_object.canada_work_ex_edu_level = 50;
             }
             else{
@@ -1816,14 +1861,29 @@ $(document).ready(function () {
         }
 
 
-        console.log(store['marital_status'])
+
+/*
+        var output = Object.entries(store).map(([key, value])=>({key,value}));
+        console.log(output);
+
+        var send = JSON.stringify(output);*/
+
+        var arr = [];
+        for (var i in store) {
+            if (store.hasOwnProperty(i)) {
+                arr.push([i, store[i]]);
+            }
+        }
+        console.log(typeof (arr));
+
         $.ajax({
             type: "POST",
             url: 'process.php',
-            data: {"students" :store},
+            data: {"students" :arr},
             cache: false,
             success: function(result){
-                alert(result);
+                $('.answer-modal').text(result);
+                $('#exampleModalanswer').modal('show');
             }
         });
 
@@ -1833,9 +1893,36 @@ $(document).ready(function () {
 
     /*send button*/
 
-    $('.send-button').click(function () {
+    $('.send-button').click(function (event) {
+        var email = $('.email-input-filed');
+        var phone = $('.phone-input-filed');
 
-        score_send();
+       var email_length = email.val().length;
+       var phone_length = phone.val().length;
+
+
+
+        if (email_length >10 && phone_length >= 10){
+
+            $('#exampleModal').modal('hide');
+           score_send();
+        }
+        else{
+            if (!(email_length > 10)){
+                email.addClass('back-ground-red');
+                email.attr("placeholder", "please enter email");
+            }
+            if (!(phone_length >=10) ){
+                phone.addClass('back-ground-red');
+                phone.attr("placeholder", "Please enter phone");
+            }
+
+
+
+        }
+
+
+
 
 
     });

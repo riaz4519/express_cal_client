@@ -261,6 +261,13 @@ input:checked + .slider-switch:before {
 .input-field{
     border-radius: 0px;
 }
+.back-ground-red{
+
+    background-color: #ffa0a6;
+
+    outline: red;
+
+}
 
 
 /*end of modal button design*/
