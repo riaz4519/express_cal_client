@@ -939,7 +939,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">Phone:</label>
-                                        <input class="form-control phone-input-filed input-field" id="message-text" required>
+                                        <input type="tel" class="form-control phone-input-filed input-field" id="message-text" required>
                                     </div>
                                     <div class="row justify-content-center">
                                         <button type="button" class="btn btn-secondary modal-button-css mr-2" data-dismiss="modal">Close</button>

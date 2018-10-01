@@ -74,10 +74,22 @@ $(document).ready(function () {
 
         canadian_education:0,
 
-        siblings_canada:0
+        siblings_canada:0,
+
+        total_sum:" ",
+
+        ip:'NULL',
+
+        email:'NULL',
+
+        phone:'NULL',
+        city:'NULL'
+
 
 
     };
+
+
 
 
 
@@ -522,10 +534,10 @@ $(document).ready(function () {
     });
 
     /*ielts button*/
-    
-    
+
+
     /*function ilets listening*/
-    
+
     function ielts_listening_change() {
 
         var listening = $('.ielts_listening_range').val();
@@ -592,11 +604,11 @@ $(document).ready(function () {
         trade_language();
         score_board();
 
-        
+
     }
-    
+
     /*end function ilets listening*/
-    
+
 
     /*ielts listening */
 
@@ -1333,11 +1345,11 @@ $(document).ready(function () {
         score_board();
 
     }
-    
+
     /*end of foreign and language */
 
     /*foreign work and canadian work trans*/
-    
+
     function foreign_canadian_work() {
 
         var canadian_work_value = crs_calculate_object.work_canada;
@@ -1373,7 +1385,7 @@ $(document).ready(function () {
         console.log('foreing  cana : '+crs_calculate_object.canada_foreign_ex);
 
 
-        
+
     }
 
     /*end of foreign work and canadian wrok trans*/
@@ -1897,6 +1909,9 @@ $(document).ready(function () {
         var email = $('.email-input-filed');
         var phone = $('.phone-input-filed');
 
+        var email_value = $('.email-input-filed').val();
+        var phone_value = $('.phone-input-filed').val();
+
        var email_length = email.val().length;
        var phone_length = phone.val().length;
 
@@ -1905,6 +1920,8 @@ $(document).ready(function () {
         if (email_length >10 && phone_length >= 10){
 
             $('#exampleModal').modal('hide');
+            crs_calculate_object.phone = phone_value;
+            crs_calculate_object.email = email_value;
            score_send();
         }
         else{
@@ -1920,6 +1937,7 @@ $(document).ready(function () {
 
 
         }
+
 
 
 
@@ -2042,21 +2060,38 @@ function score_board() {
 
 
 
+    crs_calculate_object.total_sum = ""+ total_sum;
     console.log('marriend_sum :'+married_sum);
-    console.log('total_sum :'+total_sum);
+    console.log('total_sum :'+crs_calculate_object.total_sum);
+
+    $.ajax({
+        type: "POST",
+        url: 'better_then.php',
+        data: {"total_sum" :crs_calculate_object.total_sum},
+        cache: false,
+        success: function(data){
+           alert(data)
+        }
+    });
+
+
 
 
 
 }
 
 
-
-
-
-
 console.log(crs_calculate_object.marital_status);
 
-score_board();
+
+
+    $.getJSON('http://gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+
+        console.log(data);
+        console.log(data['geobytesremoteip']);
+        crs_calculate_object.ip = data['geobytesremoteip'];
+        crs_calculate_object.city = data['geobytesregion']
+    });
 
 
 
