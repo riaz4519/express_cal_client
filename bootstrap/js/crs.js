@@ -83,7 +83,8 @@ $(document).ready(function () {
         email:'NULL',
 
         phone:'NULL',
-        city:'NULL'
+        city:'NULL',
+        name:'NULL'
 
 
 
@@ -394,13 +395,16 @@ $(document).ready(function () {
 
     /*for the age*/
 
-    $('.age-range').on('change',function () {
+    $('.age-range').on('input',function () {
 
 
         age_value();
 
-    })
+    });
+
+
     /*end of for the age*/
+
 
     /*education function*/
 
@@ -508,7 +512,7 @@ $(document).ready(function () {
 
     /*end of education function*/
 
-    $('.education-range').on('change',function () {
+    $('.education-range').on('input',function () {
 
              education_value();
 
@@ -522,7 +526,7 @@ $(document).ready(function () {
            crs_calculate_object.ielts_status = $(this).val();
 
            $('.ielts_results').slideDown('slow');
-           $('.ielts_text').text('Your Results of IELTS');
+           language_change_bangla();
 
        }
        else{
@@ -612,7 +616,7 @@ $(document).ready(function () {
 
     /*ielts listening */
 
-    $('.ielts_listening_range').on('change',function () {
+    $('.ielts_listening_range').on('input',function () {
 
         ielts_listening_change();
 
@@ -694,7 +698,7 @@ $(document).ready(function () {
 
 
     /*ielts reading */
-    $('.ielts_reading_range').on('change',function () {
+    $('.ielts_reading_range').on('input',function () {
 
         ielts_reading_change();
 
@@ -772,7 +776,7 @@ $(document).ready(function () {
     }
 
     /*ielts writing*/
-    $('.ielts_writing_range').on('change',function () {
+    $('.ielts_writing_range').on('input',function () {
 
         ielts_writing_change();
 
@@ -851,7 +855,7 @@ $(document).ready(function () {
 
     }
     /*ielts speaking*/
-    $('.ielts_speaking_range').on('change',function () {
+    $('.ielts_speaking_range').on('input',function () {
 
         ielts_speaking_change();
 
@@ -867,7 +871,7 @@ $(document).ready(function () {
             crs_calculate_object.tef_status = $(this).val();
 
             $('.tef_results').slideDown('slow');
-            $('.tef_text').text('Your Results of TEF');
+            language_change_bangla();
 
         }
         else{
@@ -913,7 +917,7 @@ $(document).ready(function () {
     }
     /*tef listening*/
 
-    $('.tef_listening_range').on('change',function () {
+    $('.tef_listening_range').on('input',function () {
 
         tef_listening_change();
 
@@ -951,7 +955,7 @@ $(document).ready(function () {
     }
 
     /*tef reading */
-    $('.tef_reading_range').on('change',function () {
+    $('.tef_reading_range').on('input',function () {
 
         tef_reading_change();
     });
@@ -987,7 +991,7 @@ $(document).ready(function () {
 
     }
     /*tef writing*/
-    $('.tef_writing_range').on('change',function () {
+    $('.tef_writing_range').on('input',function () {
 
         tef_writing_change();
     });
@@ -1025,7 +1029,7 @@ $(document).ready(function () {
 
     }
     /*tef speaking*/
-    $('.tef_speaking_range').on('change',function () {
+    $('.tef_speaking_range').on('input',function () {
 
         tef_speaking_change();
     });
@@ -1091,7 +1095,7 @@ $(document).ready(function () {
 
     }
     /*canadian work experience  */
-    $('.canadian_work_ex_range').on('change',function () {
+    $('.canadian_work_ex_range').on('input',function () {
 
 
 
@@ -1278,7 +1282,7 @@ $(document).ready(function () {
 
     /*foreign work experience*/
 
-    $('.foreign_work_range').on('change',function () {
+    $('.foreign_work_range').on('input',function () {
 
         foreign_work_change();
 
@@ -1469,7 +1473,7 @@ $(document).ready(function () {
 
     /*spouse education */
 
-    $('.spouse_education_range').on('change',function () {
+    $('.spouse_education_range').on('input',function () {
 
         var education_function = $(this).val();
 
@@ -1557,7 +1561,7 @@ $(document).ready(function () {
 
     /*spouse canadian experience*/
 
-    $('.spouse_canadian_work_ex_range').on('change',function () {
+    $('.spouse_canadian_work_ex_range').on('input',function () {
 
 
         spouse_canadian_work_change();
@@ -1574,7 +1578,7 @@ $(document).ready(function () {
             crs_calculate_object.spouse_ielts_status = $(this).val();
 
             $('.spouse_ielts_show').slideDown('slow');
-            $('.spouse_ielts_text').text('spouse Results of IELTS');
+            language_change_bangla();
 
         }
         else{
@@ -1615,7 +1619,7 @@ $(document).ready(function () {
 
         }
 
-    $('.spouse_ielts_listening_range').on('change',function () {
+    $('.spouse_ielts_listening_range').on('input',function () {
 
         spouse_ielts_listening_change();
 
@@ -1651,7 +1655,7 @@ $(document).ready(function () {
 
     }
 
-    $('.spouse_ielts_reading_range').on('change',function () {
+    $('.spouse_ielts_reading_range').on('input',function () {
 
         spouse_ielts_reading_change();
 
@@ -1686,7 +1690,7 @@ $(document).ready(function () {
 
     }
 
-    $('.spouse_ielts_writing_range').on('change',function () {
+    $('.spouse_ielts_writing_range').on('input',function () {
 
         spouse_ielts_writing_change();
 
@@ -1722,7 +1726,7 @@ $(document).ready(function () {
 
     }
 
-    $('.spouse_ielts_speaking_range').on('change',function () {
+    $('.spouse_ielts_speaking_range').on('input',function () {
 
         spouse_ielts_speaking_change();
 
@@ -1810,7 +1814,7 @@ $(document).ready(function () {
 
     /*education in canada*/
 
-    $('.canada_education_range').on('change',function () {
+    $('.canada_education_range').on('input',function () {
 
         var canada_education_value = $(this).val();
         console.log(canada_education_value);
@@ -1886,7 +1890,32 @@ $(document).ready(function () {
                 arr.push([i, store[i]]);
             }
         }
+
+        var text_email_or_phone = '';
         console.log(typeof (arr));
+        if(crs_calculate_object.email.length > 7){
+
+            text_email_or_phone = "and a detailed report has been sent to your email "+crs_calculate_object.email;
+
+
+
+        }
+
+        var answer = "";
+
+        answer += '<h3>';
+        answer +=   "Dear "+crs_calculate_object.name+" ,";
+        answer += '</h3>';
+
+
+        answer +="<p>Your CRS score comes to "+"<b>"+result_between(crs_calculate_object.total_sum)+ "</b> "+text_email_or_phone;
+        answer +="</p>";
+
+        answer += "<p>Book Appointment -> </p>";
+
+        $('.answer-modal').html(answer);
+        $('#exampleModalanswer').modal('show');
+
 
         $.ajax({
             type: "POST",
@@ -1894,8 +1923,7 @@ $(document).ready(function () {
             data: {"students" :arr},
             cache: false,
             success: function(result){
-                $('.answer-modal').text(result);
-                $('#exampleModalanswer').modal('show');
+
             }
         });
 
@@ -1908,26 +1936,30 @@ $(document).ready(function () {
     $('.send-button').click(function (event) {
         var email = $('.email-input-filed');
         var phone = $('.phone-input-filed');
+        var name  = $('.name-input-filed');
 
-        var email_value = $('.email-input-filed').val();
-        var phone_value = $('.phone-input-filed').val();
+        var email_value = email.val();
+        var phone_value = phone.val();
+        var name_value = name.val();
 
-       var email_length = email.val().length;
-       var phone_length = phone.val().length;
+       var email_length = email_value.length;
+       var phone_length = phone_value.length;
+       var name_length = name_value.length;
 
 
 
-        if (email_length >10 && phone_length >= 10){
+        if (name_length >2 && phone_length >= 10){
 
             $('#exampleModal').modal('hide');
             crs_calculate_object.phone = phone_value;
             crs_calculate_object.email = email_value;
-           score_send();
+            crs_calculate_object.name = name_value;
+           //score_send();
         }
         else{
-            if (!(email_length > 10)){
-                email.addClass('back-ground-red');
-                email.attr("placeholder", "please enter email");
+            if (!(name_length>= 2)){
+                name.addClass('back-ground-red');
+                name.attr("placeholder", "please enter you name");
             }
             if (!(phone_length >=10) ){
                 phone.addClass('back-ground-red');
@@ -2070,12 +2102,33 @@ function score_board() {
         data: {"total_sum" :crs_calculate_object.total_sum},
         cache: false,
         success: function(data){
-           alert(data)
+            toast($.trim(data));
+
         }
     });
 
 
+}
 
+
+$('.btn-send-score').on('click',function () {
+
+    score_send();
+
+});
+function result_between(result) {
+
+
+    var start = result -10;
+    var end = parseInt(result) + 10;
+
+    if (result == 0){
+
+        start =0;
+        end = 0;
+    }
+
+    return start +'-'+end;
 
 
 }
@@ -2094,6 +2147,171 @@ console.log(crs_calculate_object.marital_status);
     });
 
 
+    /*toast*/
+
+    var click_count = 0;
+
+   function toast(data) {
+
+
+
+
+       if (click_count ==0){
+           click_count = 1;
+
+           setTimeout(function(){
+               click_count = 0;
+           }, 5000);
+           $.toast({
+
+               text:''+crs_calculate_object.name+"! You're better than "+data+"% of the applicants!",
+               showHideTransition: 'slide',
+               icon: 'info',
+               loader: false,
+               hideAfter: 3000,
+               textAlign: 'left',
+               allowToastClose: true,
+               stack: 1,
+
+           });
+
+       }
+
+
+   }
+
+
+   $('#exampleModal').modal('show');
+
+
+
+
+    function language_change_bangla() {
+
+       var value_language = '';
+       var language = $('.language');
+       language.each(function () {
+          if ($(this).hasClass('background-yellow')){
+              value_language = $(this).val();
+          }
+
+
+       });
+
+
+
+        if (value_language == 'বাংলা'){
+
+            $('.marital_status').text('বৈবাহিক অবস্থা');
+            $('.single-btn').text('অবিবাহিত');
+            $('.married-btn').text('বিবাহিত');
+            $('.separated-btn').text('বিবাহবিচ্ছেদ');
+            $('.age-head').text('বয়স');
+            $('.years-of-education').text('শিক্ষার সময়কাল');
+            $('.ielts_status_question').text('আপনি কি IELTS দিয়েছেন?');
+            $('.ielts_status_btn_yes').text('হ্যাঁ ');
+            $('.ielts_status_btn_no').text('না');
+            $('.ielts_result_text').text('আপনার IELTS এর ফলাফল');
+            $('.listening_text_bangla').text('লিসেনিং');
+            $('.reading_text_bangla').text('রিডিং');
+            $('.writing_text_bangla').text('রাইটিং');
+            $('.speaking_text_bangla').text('স্পিকিং');
+            $('.tef_text_bangla').text('আপনি কি TEF দিয়েছেন ?');
+            $('.tef_status_btn_yes').text('হ্যাঁ ');
+            $('.tef_status_btn_no').text('না');
+            $('.tef_text').text('আপনার TEF এর ফলাফল');
+            $('.work_trade_text').text('কাজের অভিজ্ঞতা এবং ব্যবসা');
+            $('.work_ex_canada').text('কানাডায় কাজের অভিজ্ঞতা');
+            $('.work_foreign').text('বিদেশে কাজের অভিজ্ঞতা');
+            $('.trade_canada').text('কানাডায় ব্যবসার সার্টিফিকেট');
+            $('.canadian_trade_btn_yes').text('হ্যাঁ ');
+            $('.canadian_trade_btn_no').text('না ');
+            $('.addition_points_text').text('অতিরিক্ত বিষয়সমূহ');
+            $('.provincial_nomi_status').text('প্রাদেশিক মনোনয়ন ?');
+            $('.provincial_btn_yes').text('হ্যাঁ');
+            $('.provincial_btn_no').text('না');
+            $('.offer_canada_text').text('কানাডায় কোনো কাজের সুযোগ?');
+            $('.offer_canada_btn_no').text('না');
+            $('.offer_canada_btn_nox').text('এনওসি  ওওএক্স');
+            $('.offer_canada_btn_noc').text('এনওসি ও/এ/সি');
+            $('.family_canada_text').text('-  কানাডায় পরিবার আছে ?');
+            $('.family_canada_btn_yes').text('হ্যাঁ');
+            $('.family_canada_btn_no').text('না');
+            $('.education_canada_head').text('কানাডায় শিক্ষা গ্রহণ');
+            $('.btn_send_score_text').text('আপনার চূড়ান্ত CRS স্কোর নিন');
+            $('.spouse_text_bangla').text('স্বামী বা স্ত্রী / সাধারণ আইন অংশীদার');
+            $('.spouse_education_text_bangla').text('স্বামী বা স্ত্রী শিক্ষার সময়কাল');
+            $('.spouse_canadian_work_bangla').text('কানাডায় কাজের অভিজ্ঞতা');
+            $('.spouse_ielts_text_bangla').text('আপনার স্বামী বা স্ত্রী কি IELTS দিয়েছেন');
+            $('.spouse_ielts_btn_yes').text('হ্যাঁ')
+            $('.spouse_ielts_btn_no').text('না');
+            $('.spouse_ielts_text').text('স্বামী বা স্ত্রী IELTS এর ফলাফল');
+
+
+
+
+        }
+        else{
+            $('.marital_status').text('Marital status');
+            $('.single-btn').text('SINGLE');
+            $('.married-btn').text('MARRIED');
+            $('.separated-btn').text('SEPARATED');
+            $('.age-head').text('AGE');
+            $('.years-of-education').text('Years Of Education');
+            $('.ielts_status_question').text('Have You given IELTS? ');
+            $('.ielts_status_btn_yes').text('YES');
+            $('.ielts_status_btn_no').text('NO');
+            $('.ielts_result_text').text('Your Results of IELTS');
+            $('.listening_text_bangla').text('Listening');
+            $('.reading_text_bangla').text('Reading');
+            $('.writing_text_bangla').text('Writing');
+            $('.speaking_text_bangla').text('Speaking');
+            $('.tef_text_bangla').text('Have You given TEF?');
+            $('.tef_status_btn_yes').text('YES');
+            $('.tef_status_btn_no').text('NO');
+            $('.tef_text').text('Your Result of TEF');
+            $('.work_trade_text').text('Work Experience and Trade');
+            $('.work_ex_canada').text('Canadian Work Experience');
+            $('.work_foreign').text('Foreign work Experience ');
+            $('.trade_canada').text('Canadian trade certificate');
+            $('.canadian_trade_btn_yes').text('YES ');
+            $('.canadian_trade_btn_no').text('NO');
+            $('.addition_points_text').text('Additional points');
+            $('.provincial_nomi_status').text('Provincial nomination?');
+            $('.provincial_btn_yes').text('YES');
+            $('.provincial_btn_no').text('NO');
+            $('.offer_canada_text').text('Offer of employment in Canada ?');
+            $('.offer_canada_btn_no').text('NO');
+            $('.offer_canada_btn_nox').text('NOC OOX ');
+            $('.offer_canada_btn_noc').text('NOC O/A/C ');
+            $('.family_canada_text').text('Family in canada?');
+            $('.family_canada_btn_yes').text('YES');
+            $('.family_canada_btn_no').text('NO');
+            $('.education_canada_head').text('Education in Canada');
+            $('.btn_send_score_text').text('Get your final CRS score ');
+            $('.spouse_text_bangla').text('Spouse / common-law partner ');
+            $('.spouse_education_text_bangla').text('Spouse Education');
+            $('.spouse_canadian_work_bangla').text('Canadian Work Experience');
+            $('.spouse_ielts_text_bangla').text('Have Your spouse given IELTS?');
+            $('.spouse_ielts_btn_yes').text('YES')
+            $('.spouse_ielts_btn_no').text('NO');
+            $('.spouse_ielts_text').text('Spouse Results of IELTS');
+
+
+        }
+
+    }
+
+    $('.language').on('click',function () {
+
+        //var value_language = $(this).val();
+
+        language_change_bangla();
+
+
+
+
+    });
 
 
 

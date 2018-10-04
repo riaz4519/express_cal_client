@@ -227,14 +227,14 @@ input:checked + .slider-switch:before {
 /*end of ielts value hide show*/
 
 
-/*modal design*/
+/*!*modal design*!
 .modal-dialog {
     min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: auto;
-}
+}*/
 @media(max-width: 768px) {
     .modal-dialog {
         min-height: calc(100vh - 20px);
@@ -263,11 +263,48 @@ input:checked + .slider-switch:before {
 }
 .back-ground-red{
 
-    background-color: #ffa0a6;
+    /*background-color: #ffa0a6;
 
-    outline: red;
+    outline: red;*/
+
+    border-bottom-color: #ffa0a6;
 
 }
+.top-left-right{
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    outline: none;
+
+}
+.top-left-right:focus{
+    outline: none;
+}
+.modal-dialog-style{
+
+
+
+
+    min-height: 60vh;
+}
+.modal-content-style{
+
+    border-radius: 0px;
+    border: 10px solid #dcdcdc;
+    min-height: 60vh;
+}
+.modal-first_screen {
+    background-color: rgba(255,255,255,9);
+
+
+}
+.modal-second-screen{
+    background-color: rgba(44, 49, 56,9);
+}
+
+
 
 
 /*end of modal button design*/

@@ -17,13 +17,13 @@ if (isset($_POST['total_sum'])){
     if ($connect->query($query)->num_rows > 0){
        $total_people = $connect->query($query)->num_rows;
 
-       $query_people_under = "SELECT id from client_info WHERE total_sum <'$total_sum'";
+       $query_people_under = "SELECT id from client_info WHERE total_sum <='$total_sum'";
 
        if ($connect->query($query_people_under)->num_rows > 0){
 
           $total_under = $connect->query($query_people_under)->num_rows;
 
-          echo better_then_people_calculation($total_people,$total_under);
+         echo better_then_people_calculation($total_people,$total_under);
 
 
        }
