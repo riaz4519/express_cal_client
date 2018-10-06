@@ -1934,6 +1934,18 @@ $(document).ready(function () {
     /*send button*/
 
     $('.send-button').click(function (event) {
+
+        var value_language = '';
+        var language = $('.language');
+        language.each(function () {
+            if ($(this).hasClass('background-yellow')){
+                value_language = $(this).val();
+            }
+
+
+        });
+
+
         var email = $('.email-input-filed');
         var phone = $('.phone-input-filed');
         var name  = $('.name-input-filed');
@@ -1951,19 +1963,32 @@ $(document).ready(function () {
         if (name_length >2 && phone_length >= 10){
 
             $('#exampleModal').modal('hide');
-            crs_calculate_object.phone = phone_value;
+            crs_calculate_object.phone = '+88'+phone_value;
             crs_calculate_object.email = email_value;
             crs_calculate_object.name = name_value;
-           //score_send();
+
+
         }
         else{
             if (!(name_length>= 2)){
                 name.addClass('back-ground-red');
-                name.attr("placeholder", "please enter you name");
+                if (value_language == 'বাংলা' ){
+                    name.attr("placeholder", "আপনার পুরো নাম লিখুন");
+                }
+                else{
+                    name.attr("placeholder", "please enter you name");
+                }
+
             }
             if (!(phone_length >=10) ){
                 phone.addClass('back-ground-red');
-                phone.attr("placeholder", "Please enter phone");
+                if (value_language == 'বাংলা' ){
+                    phone.attr("placeholder", "ফোন নম্বর");
+                }
+                else{
+                    phone.attr("placeholder", "Please enter phone");
+                }
+
             }
 
 
@@ -2243,9 +2268,17 @@ console.log(crs_calculate_object.marital_status);
             $('.spouse_education_text_bangla').text('স্বামী বা স্ত্রী শিক্ষার সময়কাল');
             $('.spouse_canadian_work_bangla').text('কানাডায় কাজের অভিজ্ঞতা');
             $('.spouse_ielts_text_bangla').text('আপনার স্বামী বা স্ত্রী কি IELTS দিয়েছেন');
-            $('.spouse_ielts_btn_yes').text('হ্যাঁ')
+            $('.spouse_ielts_btn_yes').text('হ্যাঁ');
             $('.spouse_ielts_btn_no').text('না');
             $('.spouse_ielts_text').text('স্বামী বা স্ত্রী IELTS এর ফলাফল');
+            $('.report_bangla').text('অনলাইন সিআরএস রিপোর্ট');
+            $('.enter_full_name').attr('placeholder','আপনার পুরো নাম লিখুন');
+            $('.enter_phone').attr('placeholder','ফোন নম্বর');
+            $('.enter_email').attr('placeholder','ই-মেইল');
+            $('.crs_score_get_button').val('আপনার CRS স্কোর নিন');
+            $('.crs_score_via_online').text('অনলাইনের মাধ্যমে সরাসরি আপনার সিআরএস স্কোর নিন');
+            $('.description_change').text('কানাডা ইমিগ্রেশন শুধুমাত্র আপনার যোগ্যতা সম্পর্কে নয় - এখন আপনার অ্যাপ্লিকেশনটিকে একটি এক্সপ্রেস এন্ট্রি পুলে জমা দিতে হবে । যেখানে আপনি বিশ্বব্যাপী ১০৩,০০০ অন্যান্য আবেদনকারীদের বিরুদ্ধে প্রতিযোগিতা করবেন।');
+
 
 
 
@@ -2293,9 +2326,17 @@ console.log(crs_calculate_object.marital_status);
             $('.spouse_education_text_bangla').text('Spouse Education');
             $('.spouse_canadian_work_bangla').text('Canadian Work Experience');
             $('.spouse_ielts_text_bangla').text('Have Your spouse given IELTS?');
-            $('.spouse_ielts_btn_yes').text('YES')
+            $('.spouse_ielts_btn_yes').text('YES');
             $('.spouse_ielts_btn_no').text('NO');
             $('.spouse_ielts_text').text('Spouse Results of IELTS');
+            $('.report_bangla').text('Online CRS Report');
+            $('.enter_full_name').attr('placeholder','your Full Name');
+            $('.enter_phone').attr('placeholder','Your Phone number');
+            $('.enter_email').attr('placeholder','Email');
+            $('.crs_score_get_button').val('Get your CRS Score');
+            $('.crs_score_via_online').text('Get your CRS score directly via online');
+            $('.description_change').text('Canada Immigration isn\'t just about your eligibility - now your Application needs to be submitted to an express entry pool as well where you compete against 103,000 other applicants globally');
+
 
 
         }

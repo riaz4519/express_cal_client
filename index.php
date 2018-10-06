@@ -27,32 +27,8 @@
 
         <div class="col-sm-8" style="border: 13px solid #dcdcdc;">
 
-            <div class="row grey-background justify-content-center padding-top-bottom">
 
 
-
-
-
-
-                <div class="col-12">
-
-                    <div class="row justify-content-center">
-
-                        <input type="button"  name="language" class="btn language btn-yes-no btn-outline-secondary no-border-radius btn-sm col-4 col-md-3 col-lg-2 background-yellow" value="ENGLISH"/>
-
-                        <input type="button"  name="language"  class="btn language  btn-yes-no btn-outline-secondary no-border-radius btn-sm  col-4 col-md-3  col-lg-2" value="বাংলা" />
-
-
-                    </div>
-
-
-                </div>
-
-
-
-
-
-            </div>
 
             <!--start of marrital status-->
 
@@ -129,8 +105,9 @@
                     </div>
 
                 <div class="col-10 text-center">
-                    <input type="range" min="0" max="8" value="0" class="slider education-range" id="myRange">
                     <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="education-change">Two Year Post Secondary Credentials</b></p>
+                    <input type="range" min="0" max="8" value="0" class="slider education-range" id="myRange">
+
                 </div>
 
             </div>
@@ -582,9 +559,9 @@
 
                                 <div class="col-11 text-center">
 
-
-                                    <input type="range" min="0" step="1" max="8" value="0" class="slider spouse_education_range" id="myRange" data-show-value="true">
                                     <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="spouse_education_text">Two Year Post Secondary Credentials</b></p>
+                                    <input type="range" min="0" step="1" max="8" value="0" class="slider spouse_education_range" id="myRange" data-show-value="true">
+
                                 </div>
 
                             </div>
@@ -936,9 +913,9 @@
 
                                 <div class="col-11 text-center">
 
-
+                                    <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="canada_education_text">None</b></p>
                                 <input type="range" min="0" step="0" max="2" value="0" class="slider canada_education_range" id="myRange" data-show-value="true">
-                                <p style="font-size: .65rem"><span class="grey-color-text" >You Selected:</span><b class="canada_education_text">None</b></p>
+
                                 </div>
 
                             </div>
@@ -962,21 +939,34 @@
 
                 <!--code fore modal start-->
 
-                <div class="modal fade modal-first_screen" id="exampleModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-style" role="document" id="modal_id">
+                <div class="modal fade modal-first_screen  " id="exampleModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-style " role="document" id="modal_id">
                         <div class="modal-content modal-content-style">
+                            <!--language change-->
+
+                            <div class="row justify-content-center mt-2">
+
+                                <input type="button"  name="language" class="btn language btn-yes-no btn-outline-secondary no-border-radius btn-sm col-4 col-md-3 col-lg-2 background-yellow" value="ENGLISH"/>
+
+                                <input type="button"  name="language"  class="btn language  btn-yes-no btn-outline-secondary no-border-radius btn-sm  col-4 col-md-3  col-lg-2" value="বাংলা" />
+
+
+                            </div>
+
+                            <!--end language change-->
 
                             <div class="modal-body mt-2" style="line-height: .9rem">
 
 
                                 <div class="text-center" style="font-size: smaller">
 
-                                    <p style="color:#78e4ea;font-size: 18px">Online CRS Report</p>
 
-                                    <p>Canada Immigration isn't just about your eligibility - now you need to be submitted to an express
-                                        entry pool as well where you compete against a global applicant pool</p>
+                                    <p style="color:#78e4ea;font-size: 15px" class="report_bangla">Online CRS Report</p>
 
-                                    <p>Get your CRS score delivered directly to your via online</p>
+                                    <p class="description_change">Canada Immigration isn't just about your eligibility - now your Application needs to be submitted to an express entry
+                                        pool as well where you compete against 103,000 other applicants globally</p>
+
+                                    <p class="crs_score_via_online">Get your CRS score  directly via online</p>
 
 
                                 </div>
@@ -986,24 +976,30 @@
                                 <form class="">
                                     <div class="form-group">
 
-                                        <input type="text" class="form-control name-input-filed input-field top-left-right" placeholder="Enter your Full name" id="recipient-name" required>
+                                        <input type="text" class="form-control name-input-filed input-field top-left-right enter_full_name" placeholder="Enter your Full name" id="recipient-name" required>
                                     </div>
 
 
                                     <div class="form-group">
 
-                                        <input type="tel" class="form-control phone-input-filed input-field top-left-right" placeholder="Phone" id="message-text" required>
+
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text top-left-right">+88</div>
+                                        </div>
+                                        <input type="tel" class="form-control phone-input-filed input-field top-left-right enter_phone" placeholder="Phone" id="message-text"  maxlength="11" required>
                                     </div>
 
 
                                     <div class="form-group">
 
-                                        <input type="email" class="form-control email-input-filed input-field top-left-right" placeholder="Email" id="message-text1" required>
+                                        <input type="email" class="form-control email-input-filed input-field top-left-right enter_email" placeholder="Email" id="message-text1" required>
                                     </div>
 
 
 
-                                    <input type="button" class="btn btn-primary modal-button-css send-button btn-block mt-3 send-button" style="border-radius: 0px; background-color: #FEEF1C;color: black;outline: #FEEF1C" value="Get your CRS Score">
+                                    <input type="button" class="btn btn-primary modal-button-css send-button btn-block mt-3 send-button crs_score_get_button" style="border-radius: 0px; background-color: #FEEF1C;color: black;outline: #FEEF1C" value="Get your CRS Score">
 
 
                                 </form>
@@ -1063,7 +1059,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content modal-content-style">
 
-                            <div class="modal-body text-center">
+                            <div class="modal-body modal-second-screen-body text-center">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                                 <div class="answer-modal">

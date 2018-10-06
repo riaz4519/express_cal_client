@@ -1096,8 +1096,10 @@ General FAQ: Canada Immigration
 
             }
 
-            echo points_between($total_sum);
-            $update = '';
+            sendMessage($phone,$name,(points_between($total_sum)));
+
+            //echo points_between($total_sum);
+            //$update = '';
 
         }else{
             echo 'wrong';
@@ -1197,5 +1199,44 @@ function points_between($total_sum){
 
 
 }
+
+function sendMessage($phone,$name,$range){
+
+
+    if (strlen(strpos($phone,'+88'))){
+
+        $phone = substr($phone,3);
+    }
+
+
+
+
+
+    $username = 'admin';
+    $password = 'Generic!1234';
+    $message ="Dear $name, your CRS score range is $range .Please meet with one of our counsellors with your report to discuss further.
+Book Now: ...\nThank you. ";
+
+    $message = urlencode($message);
+
+    $url = "http://gicl.powersms.net.bd/httpapi/sendsms?userId=form_sms&password=gicsms123&smsText=$message&commaSeperatedReceiverNumbers=$phone";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+    curl_setopt($ch, CURLOPT_ENCODING, "gzip,deflate");
+    $response = curl_exec($ch);
+    curl_close($ch);
+//     echo $phone . ': ';
+//     $response = str_replace('Success Count : 1 and Fail Count : 0', 'Sent Successfully!', $response);
+//     $response = str_replace('Success Count : 0 and Fail Count : 1', 'Failed!', $response);
+//     echo $response . '<br>';
+    return "successful";
+
+}
+
+
 
 ?>
