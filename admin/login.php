@@ -32,6 +32,7 @@ if (isset($_POST['login'])){
               $result = $ans->fetch_assoc();
 
               $_SESSION['name'] = $result['name'];
+              $_SESSION['admin_id'] = $result['id'];
 
 
 

@@ -59,15 +59,14 @@ if (isset($_POST['students'])){
 
 
         if ($ans[$i][0] == 'education_value' || $ans[$i][0] == 'work_canada' || $ans[$i][0] == 'ielts_value_listening' || $ans[$i][0] == 'ielts_value_reading'
-        || $ans[$i][0] == 'ielts_value_writing' || $ans[$i][0] == 'ielts_value_speaking' || $ans[$i][0] == 'tef_value_listening' || $ans[$i][0] == 'tef_value_reading' ||
-            $ans[$i][0] == 'ielts_value_writing' || $ans[$i][0] == 'tef_value_speaking'){
+            || $ans[$i][0] == 'ielts_value_writing' || $ans[$i][0] == 'ielts_value_speaking' || $ans[$i][0] == 'age_value' ){
 
             $core_human += $ans[$i][1];
 
         }
 
-        if ($ans[$i][0] == 'spouse_edu' || $ans[$i][0] == 'spouse_work' || $ans[$i][0] == 'spouse_ielts_listening ' || $ans[$i][0] == ' 	spouse_ielts_reading' ||
-            $ans[$i][0] == ' 	spouse_ielts_writing' ||$ans[$i][0] == 'spouse_ielts_speaking ' ){
+        if ($ans[$i][0] == 'spouse_edu' || $ans[$i][0] == 'spouse_work' || $ans[$i][0] == 'spouse_ielts_listening' || $ans[$i][0] == 'spouse_ielts_reading' ||
+            $ans[$i][0] == 'spouse_ielts_writing' ||$ans[$i][0] == 'spouse_ielts_speaking ' ){
 
 
             $spouse_common += $ans[$i][1];

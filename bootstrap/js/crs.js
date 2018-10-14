@@ -651,10 +651,10 @@ $(document).ready(function () {
             else if(reading == 6.5){
                 crs_calculate_object.ielts_value.reading = 22;
             }
-            else if(reading == 7.0){
+            else if(reading >= 7.0 && reading<=7.5){
                 crs_calculate_object.ielts_value.reading = 29;
             }
-            else if(reading >= 7.5 && reading <=9){
+            else if(reading >= 8&& reading <=9){
                 crs_calculate_object.ielts_value.reading = 32;
             }
             console.log(crs_calculate_object.ielts_value.reading);
@@ -678,10 +678,10 @@ $(document).ready(function () {
             else if(reading == 6.5){
                 crs_calculate_object.ielts_value.reading = 23;
             }
-            else if(reading == 7.0){
+            else if(reading >= 7.0 && reading<=7.5){
                 crs_calculate_object.ielts_value.reading = 31;
             }
-            else if(reading >= 7.4 && reading <=9){
+            else if(reading >= 8 && reading <=9){
                 crs_calculate_object.ielts_value.reading = 34;
             }
 
@@ -1520,6 +1520,7 @@ $(document).ready(function () {
         }
 
         console.log('edu_spouse'+crs_calculate_object.spouse_edu);
+        score_board();
 
     });
 
